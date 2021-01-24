@@ -1,0 +1,15 @@
+<h1><%= @article.title %></h1>
+
+<p><%= @article.body %></p>
+
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <button type="button" class="btn btn-info"><%= link_to "Düzenle", edit_article_path(@article) %></button>
+</div>
+
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <button type="button" class="btn btn-danger"><%= link_to "Sil", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></button>
+</div>    
+
+
+
+<!--yorum bölümü silindi-->
