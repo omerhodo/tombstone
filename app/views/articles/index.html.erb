@@ -8,36 +8,41 @@
 </div>
 
 
-<div class="row text-white">
-  <button type="button" class="btn btn-warning"><%= link_to "Yeni Mesaj" , new_article_path %></button>
+<div class="row">
+  <%= link_to "Yeni Mesaj" , new_article_path, :class => "btn btn-primary btn-lg" %>
 </div> 
 
-<div class="row bg-dark">
-    <div class="col-md-12">
-      <% @articles.each do |article|%>
 
-                <div class="card mx-auto d-block" style="float:left;">
-                    <div class="card text-white bg-dark" style="width: 14rem;">
-                      <div class="card-body mx-auto d-block text-white">
-                          <%=image_tag("servi", :class=>"rounded-circle", :size=>"140x140")%>
-                          <div>
-                            <h4 class="card-title"><%=article.title%></h5>
-                          </div>
 
-                          <div>
-                            <h6 class="card-subtitle mb-2 text-muted"><%article.id%></h6>
-                          </div>
-                          
-                          <div>
-                            <p class="card-text"><%=article.body%></p>
-                          </div> 
-                                  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                      <button type="button" class="btn btn-info"><%= link_to "Göster", article %></button>
-                                  </div>   
-                          </div>
-                        </div>
-                </div>
+<br>
+<!-- Page Content -->
+<div class="container">
+  <!-- Page Features -->
+  <div class="row text-center">
+    
+    <% @articles.each do |article|%>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 bg-dark mx-auto d-block">
+          <%=image_tag("servi", :class=>"rounded-circle", :size=>"140x140")%>
+          <div class="card-body bg-dark">
+            <h4 class="card-title"><%=article.title%></h4>
+            <p class="card-text"><%=article.body%></p>
+          </div>
+          <div>
+            <h6 class="card-subtitle mb-2 text-muted"><%article.id%></h6>
+          </div>
+          <div class="card-footer">
+          <%= link_to "Göster", article, :class => "btn btn-success btn-lg" %>
+          </div>
+        </div>
+      </div>
+
+
       <% end %>
-      
     </div>
-</div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+
