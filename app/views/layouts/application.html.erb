@@ -23,7 +23,15 @@
 
     </div>
   </nav>
-
+  <!-- Sign -->
+  <ul>
+    <% if user_signed_in? %>
+      <li><%= link_to "Çıkış Yap", destroy_user_session_path, methos: :delete, data: { confirm: "Çıkış yapmak istiyor musunuz?" } %></li>
+    <% else %>
+      <li><%= link_to "Giriş yap", new_user_session_path, class: "text-white" %></li>
+      <li><%= link_to "Kayıt ol", new_user_registration_path %></li>
+    <% end %>
+  </ul>
   
   
   
