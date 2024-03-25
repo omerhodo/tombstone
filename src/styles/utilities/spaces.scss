@@ -1,4 +1,4 @@
-$spaces: (5, 10, 15, 30, 45, 60, 90);
+$spaces: (5, 10, 15, 30, 45, 50, 60, 90);
 
 @each $space in $spaces {
   .m-#{$space} {

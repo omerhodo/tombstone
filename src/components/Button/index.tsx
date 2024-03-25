@@ -1,4 +1,4 @@
-import './button.scss';
+import '@styles/components/button.scss';
 
 const Button = ({
   bgColor = 'white',
