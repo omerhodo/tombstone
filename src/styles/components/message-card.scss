@@ -30,6 +30,8 @@
       height: 75px;
       border-radius: 50%;
       object-fit: cover;
+      background: rgba(110, 194, 110, 0.799);
+      backdrop-filter: blur( 50px );
     }
   }
 

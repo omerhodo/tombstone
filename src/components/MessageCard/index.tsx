@@ -1,5 +1,5 @@
 import '@styles/components/message-card.scss';
-import Tree from '@/assets/images/main/servi.png';
+import Tree from '@/assets/images/main/tree.svg';
 
 const MessageCard = () => {
   return (
