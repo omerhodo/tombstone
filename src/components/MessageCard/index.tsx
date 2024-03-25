@@ -3,7 +3,7 @@ import Tree from '@/assets/images/main/servi.png';
 
 const MessageCard = () => {
   return (
-    <div className="message-card glass">
+    <div className="message-card is-glass">
       <div className="message-card__header mb-20">
         <img className="message-card__header--avatar" src={Tree} alt="User" />
         <h2 className="message-card__header--title">John Doe</h2>
