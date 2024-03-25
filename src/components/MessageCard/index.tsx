@@ -1,4 +1,4 @@
-import './message-card.scss';
+import '@styles/components/message-card.scss';
 
 const MessageCard = () => {
   return (

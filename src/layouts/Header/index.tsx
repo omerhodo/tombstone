@@ -1,7 +1,6 @@
-import React from 'react';
-
-import './header.scss';
 import MainImage from '@/assets/images/main/main-image.jpg';
+
+import '@styles/layouts/header.scss';
 
 const Header = () => {
   return (

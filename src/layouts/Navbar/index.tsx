@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Logo from '@/assets/images/logo/tombstone-logo.svg';
 
-import './navbar.scss';
+import '@styles/layouts/navbar.scss';
 
 const Navbar = () => {
   return (
