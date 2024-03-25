@@ -7,7 +7,7 @@ const Button = ({
   width = '100%',
   text = 'buton',
   height = '40px',
-  borderColor,
+  borderColor = 'none',
   fontSize = '16px',
   ...rest
 }) => {

@@ -4,7 +4,11 @@ import Footer from '@layouts/Footer';
 
 import '@styles/layouts/main-layouts.scss';
 
-const MainLayout = ({ children }) => {
+interface MainLayoutProps {
+  children: React.ReactNode;
+}
+
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <div className="main-layouts">
       <Navbar />

@@ -8,7 +8,7 @@ const Home = () => {
       <div className="home__new-message">
         <Button
           text="New Message"
-          radius="10"
+          radius={10}
           bgColor="green"
           borderColor="green"
           textColor="white"
