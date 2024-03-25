@@ -1,4 +1,4 @@
-import Header from '@components/Header';
+import Header from '@layouts/Header';
 import Button from '@components/Button';
 
 const Home = () => {

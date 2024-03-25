@@ -1,6 +1,8 @@
+@import '@styles/colors';
+
 .navbar {
-  background-color: #bd9b5c;
-  color: #fff;
+  background-color: $gold-yellow-dark;
+  color: $white;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -19,12 +21,12 @@
   }
 
   &__link {
-    color: #fff;
+    color: $white;
     text-decoration: none;
 
     &:hover {
       text-decoration: none;
-      color: #937949;
+      color: $gold-yellow;
     }
   }
 }

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from '@components/Navbar';
-import Home from '@pages/Home';
+import MainLayout from '@layouts/MainLayout';
+import MessageContainer from '@containers/MessageContainer';
 import About from '@pages/About';
 
 import './App.scss';
@@ -10,10 +10,12 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route
+            path="/"
+            element={<MainLayout children={<MessageContainer />} />}
+          />
+          <Route path="/about" element={<MainLayout children={<About />} />} />
         </Routes>
       </Router>
     </>
