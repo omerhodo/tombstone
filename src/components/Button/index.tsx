@@ -1,19 +1,21 @@
 import '@styles/components/button.scss';
 
 const Button = ({
-  bgColor = 'white',
-  textColor = '',
+  bgColor = 'transparent',
+  textColor = 'burlywood',
   radius = 10,
   width = '100%',
   text = 'buton',
   height = '40px',
   borderColor = 'none',
   fontSize = '16px',
+  fontWeight = 'normal',
+  className = '',
   ...rest
 }) => {
   return (
     <button
-      className="base-button"
+      className={`base-button is-glass ${className}`}
       style={{
         backgroundColor: bgColor,
         color: textColor,
@@ -22,6 +24,7 @@ const Button = ({
         height: height,
         borderColor: borderColor,
         fontSize: fontSize,
+        fontWeight: fontWeight,
       }}
       {...rest}
     >
