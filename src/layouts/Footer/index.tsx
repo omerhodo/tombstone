@@ -1,11 +1,11 @@
-import '@styles/layouts/header.scss';
+import '@styles/layouts/footer.scss';
 
 const Footer = () => {
   return (
-    <div>
+    <footer className="footer">
       <h1>Footer</h1>
       <p>Footer content</p>
-    </div>
+    </footer>
   );
 };
 
