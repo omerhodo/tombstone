@@ -3,8 +3,8 @@ import '@styles/layouts/footer.scss';
 const Footer = () => {
   return (
     <footer className="footer">
-      <h1>Footer</h1>
-      <p>Footer content</p>
+      <h1>Ömer Hodo</h1>
+      <p>Project</p>
     </footer>
   );
 };

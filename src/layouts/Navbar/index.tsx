@@ -9,7 +9,7 @@ const Navbar = () => {
       <img src={Logo} className="navbar--logo" alt="Logo" />
       <div className="navbar__title">
         <Link className="navbar__link" to="/about">
-          Tombstone
+          Hodo's Tombstone
         </Link>
       </div>
       <img src={Logo} className="navbar--logo" alt="Logo" />
