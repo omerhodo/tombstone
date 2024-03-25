@@ -1,0 +1,12 @@
+@import '@styles/utilities/_utilities.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  min-height: 200px;
+  background-color: $gold-yellow-dark;
+  color: $white;
+}

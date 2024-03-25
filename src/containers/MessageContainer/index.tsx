@@ -1,6 +1,6 @@
 import MessageCard from '@components/MessageCard';
 
-import './message-container.scss';
+import '@styles/containers/message-container.scss';
 
 const MessageContainer = () => {
   return (

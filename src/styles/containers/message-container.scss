@@ -1,5 +1,6 @@
 .message-container {
   display: grid;
+  min-height: 50vh;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 50px;
 }
