@@ -1,0 +1,45 @@
+$spaces: (5, 10, 15, 30, 45, 60, 90);
+
+@each $space in $spaces {
+  .m-#{$space} {
+    margin: #{$space}px !important;
+  }
+
+  .mt-#{$space}, .my-#{$space} {
+    margin-top: #{$space}px !important;
+  }
+
+  .mb-#{$space}, .my-#{$space} {
+    margin-bottom: #{$space}px !important;
+  }
+
+  .ml-#{$space}, .mx-#{$space} {
+    margin-left: #{$space}px !important;
+  }
+
+  .mr-#{$space}, .mx-#{$space} {
+    margin-right: #{$space}px !important;
+  }
+}
+
+@each $space in $spaces {
+  .p-#{$space} {
+    padding: #{$space}px !important;
+  }
+
+  .pt-#{$space}, .py-#{$space} {
+    padding-top: #{$space}px !important;
+  }
+
+  .pb-#{$space}, .py-#{$space} {
+    padding-bottom: #{$space}px !important;
+  }
+
+  .pl-#{$space}, .px-#{$space} {
+    padding-left: #{$space}px !important;
+  }
+
+  .pr-#{$space}, .px-#{$space} {
+    padding-right: #{$space}px !important;
+  }
+}
