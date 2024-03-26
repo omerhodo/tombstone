@@ -9,11 +9,12 @@ interface MessageData {
 
 const sendData = async (
   type: string,
-  { userName, content, ...rest }: MessageData
+  { userName, email, content, ...rest }: MessageData
 ) => {
   try {
     await addDoc(collection(db, type), {
       userName: userName,
+      email: email,
       content: content,
       createdAt: new Date(),
       ...rest,

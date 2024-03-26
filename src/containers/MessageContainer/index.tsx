@@ -7,8 +7,13 @@ import '@styles/containers/message-container.scss';
 const MessageContainer = () => {
   const [messages, setMessages] = useState<any[]>([]);
 
+  const getMessages = async () => {
+    const data = await getData('messages');
+    setMessages(data);
+  };
+
   useEffect(() => {
-    getData('messages').then(setMessages);
+    getMessages();
     console.log(messages);
   }, []);
 

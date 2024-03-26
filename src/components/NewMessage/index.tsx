@@ -17,6 +17,7 @@ const NewMessage = () => {
   const sendMessage = async () => {
     await sendData('messages', {
       userName: currentUser?.displayName,
+      email: currentUser?.email,
       content: message,
     });
   };
