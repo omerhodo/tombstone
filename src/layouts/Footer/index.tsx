@@ -1,10 +1,11 @@
+import AuthForm from '@components/AuthForm';
+
 import '@styles/layouts/footer.scss';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <h1>Ömer Hodo</h1>
-      <p>Project</p>
+      <AuthForm />
     </footer>
   );
 };
