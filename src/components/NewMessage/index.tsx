@@ -7,6 +7,7 @@ import { useAuth } from '@contexts/AuthContext';
 import '@styles/components/new-message.scss';
 
 const NewMessage = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [message, setMessage] = useState<string>('');
   const openModal = () => setIsModalOpen(true);
@@ -15,17 +16,24 @@ const NewMessage = () => {
   const { currentUser } = useAuth() ?? { currentUser: null };
 
   const sendMessage = async () => {
-    await sendData('messages', {
-      userName: currentUser?.displayName,
-      email: currentUser?.email,
-      content: message,
-      createdAt: new Date(),
-    });
+    setIsLoading(true);
+    const messageTrimmed = message.trim();
+    try {
+      await sendData('messages', {
+        userName: currentUser?.displayName,
+        email: currentUser?.email,
+        content: messageTrimmed,
+        createdAt: new Date(),
+      });
+    } catch (error) {
+      console.error('Error sending message: ', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleSubmit = () => {
     sendMessage();
-    setIsModalOpen(false);
   };
   return (
     <>
@@ -50,7 +58,13 @@ const NewMessage = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Mesajınızı Yazınız"
               />
-              <Button onClick={handleSubmit} text="Mesajı Gönder"></Button>
+              {isLoading ? (
+                <label className="new-message__loading">
+                  Mesajınız gönderiliyor...
+                </label>
+              ) : (
+                <Button onClick={handleSubmit} text="Mesajı Gönder"></Button>
+              )}
             </>
           ) : (
             <>
