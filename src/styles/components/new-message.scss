@@ -1,0 +1,27 @@
+@import '@styles/utilities/_utilities.scss';
+
+.new-message {
+  display: flex;
+  flex-direction: column;
+  color: burlywood;
+
+  &__name {
+    font-size: 20px;
+    color: $gold-yellow-dark;
+    margin-bottom: 15px;
+  }
+
+  &__text-area {
+    padding: 10px;
+    border: 1px solid $gold-yellow;
+    border-radius: 10px;
+    color: $grey;
+    margin-bottom: 60px;
+  }
+
+  &__warning {
+    text-align: center;
+    color: $red;
+    font-size: 20px;
+  }
+}
