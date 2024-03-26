@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { signIn, signUp, signOutUser, authUser } from '@/firebase';
+import { signIn, signUp, signOutUser } from '@/firebase';
+import { useAuth } from '@contexts/AuthContext';
 
 import GoogleSignInButton from '@/components/GoogleSignInButton';
 
@@ -8,14 +9,15 @@ const AuthForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const user = authUser.currentUser;
+  const { currentUser } = useAuth() ?? { currentUser: null };
 
   useEffect(() => {
-    if (user) {
+    if (currentUser) {
       setIsLogin(true);
-      console.log(user);
+    } else {
+      setIsLogin(false);
     }
-  }, [user]);
+  }, [currentUser]);
 
   const _login = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
