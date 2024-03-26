@@ -9,7 +9,7 @@ const AuthForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const { currentUser } = useAuth();
+  const { currentUser } = useAuth() ?? { currentUser: null };
 
   useEffect(() => {
     if (currentUser) {
