@@ -1,10 +1,20 @@
 import { collection, addDoc } from 'firebase/firestore';
+import { db } from '@/firebase';
 
-const sendData = async (type: string, { content, userName, ...rest }) => {
+interface MessageData {
+  userName?: string | null;
+  content: string;
+  [key: string]: any;
+}
+
+const sendData = async (
+  type: string,
+  { userName, content, ...rest }: MessageData
+) => {
   try {
     await addDoc(collection(db, type), {
-      text: content,
       userName: userName,
+      content: content,
       createdAt: new Date(),
       ...rest,
     });

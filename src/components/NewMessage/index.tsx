@@ -8,7 +8,7 @@ import '@styles/components/new-message.scss';
 
 const NewMessage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [message, setMessage] = useState([]);
+  const [message, setMessage] = useState<string>('');
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
@@ -16,8 +16,8 @@ const NewMessage = () => {
 
   const sendMessage = async () => {
     await sendData('messages', {
-      name: currentUser?.displayName,
-      message: message,
+      userName: currentUser?.displayName,
+      content: message,
     });
   };
 

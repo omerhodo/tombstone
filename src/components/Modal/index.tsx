@@ -1,6 +1,14 @@
-import '@styles/components/modal.scss';
+import { ReactNode } from 'react';
 
-const Modal = ({ isOpen, onClose, title, children }) => {
+import '@styles/components/modal.scss';
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  title: string;
+  children: ReactNode;
+}
+
+const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
   if (!isOpen) return null;
 
   return (
