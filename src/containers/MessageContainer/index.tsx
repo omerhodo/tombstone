@@ -8,13 +8,16 @@ const MessageContainer = () => {
   const [messages, setMessages] = useState<any[]>([]);
 
   const getMessages = async () => {
-    const data = await getData('messages');
-    setMessages(data);
+    try {
+      const data = await getData('messages');
+      setMessages(data);
+    } catch (error) {
+      console.error('Mesajlar getirilirken hata oluştu: ', error);
+    }
   };
 
   useEffect(() => {
     getMessages();
-    console.log(messages);
   }, []);
 
   return (
