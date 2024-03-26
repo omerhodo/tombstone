@@ -13,6 +13,7 @@ export default defineConfig({
       '@pages': path.resolve(__dirname, './src/pages'),
       '@layouts': path.resolve(__dirname, './src/layouts'),
       '@containers': path.resolve(__dirname, './src/containers'),
+      '@contexts': path.resolve(__dirname, './src/contexts'),
       '@styles': path.resolve(__dirname, './src/styles'),
     },
   },
