@@ -9,6 +9,8 @@ const AuthForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  const showLoginRegisterForm = false;
+
   const { currentUser } = useAuth() ?? { currentUser: null };
 
   useEffect(() => {
@@ -46,31 +48,33 @@ const AuthForm = () => {
       )}
       {!isLogin && (
         <>
-          <form className="is-flex-column">
-            <input
-              type="text"
-              className="mb-5"
-              placeholder="Username"
-              onChange={(e) => {
-                setUsername(e.target.value);
-              }}
-            />
-            <input
-              type="password"
-              className="mb-5"
-              placeholder="Password"
-              autoComplete="off"
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
-            <button type="submit" onClick={_login} className="mb-5">
-              Login
-            </button>
-            <button type="submit" onClick={_register} className="mb-5">
-              Register
-            </button>
-          </form>
+          {showLoginRegisterForm && (
+            <form className="is-flex-column">
+              <input
+                type="text"
+                className="mb-5"
+                placeholder="Username"
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                }}
+              />
+              <input
+                type="password"
+                className="mb-5"
+                placeholder="Password"
+                autoComplete="off"
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
+              />
+              <button type="submit" onClick={_login} className="mb-5">
+                Login
+              </button>
+              <button type="submit" onClick={_register} className="mb-5">
+                Register
+              </button>
+            </form>
+          )}
           <GoogleSignInButton />
         </>
       )}
