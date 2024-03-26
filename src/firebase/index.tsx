@@ -1,4 +1,5 @@
 import { signIn, signUp, signOutUser, authUser } from './auth';
-import { auth } from './firebase-config';
+import { sendData } from './sendData';
+import { auth, db } from './firebase-config';
 
-export { auth, signIn, signUp, signOutUser, authUser };
+export { auth, signIn, signUp, signOutUser, authUser, db, sendData };
