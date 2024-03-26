@@ -3,21 +3,21 @@ import { db } from '@/firebase';
 
 interface MessageData {
   userName?: string | null;
+  email?: string | null;
   content: string;
-  [key: string]: any;
+  createdAt?: Date;
 }
 
 const sendData = async (
   type: string,
-  { userName, email, content, ...rest }: MessageData
+  { userName, email, content, createdAt }: MessageData
 ) => {
   try {
     await addDoc(collection(db, type), {
       userName: userName,
       email: email,
       content: content,
-      createdAt: new Date(),
-      ...rest,
+      createdAt: createdAt,
     });
   } catch (error) {
     console.error('Db erişimde hata oluştu: ', error);

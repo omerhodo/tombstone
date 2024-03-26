@@ -19,6 +19,7 @@ const NewMessage = () => {
       userName: currentUser?.displayName,
       email: currentUser?.email,
       content: message,
+      createdAt: new Date(),
     });
   };
 
