@@ -15,9 +15,14 @@
     align-items: center;
 
     &--title {
+      padding-left: 30px;
+      padding-right: 20px;
       text-align: center;
-      font-size: 24px;
+      line-height: 1.2em;
+      font-size: 18px;
       color: $primary;
+
+      @include truncate-text;
     }
 
     &--avatar {
@@ -39,8 +44,11 @@
     @include truncate-text(3);
 
     &--text {
-      color: $grey;
+      padding-left: 30px;
+      padding-right: 20px;
+      color: $primary-light;
       font-size: 18px;
+      line-height: 1.2em;
     }
   }
 
@@ -49,8 +57,8 @@
     justify-content: flex-end;
 
     &--date {
-      color: $grey-light;
-      font-size: 16px;
+      color: $primary;
+      font-size: 14px;
     }
   }
 }

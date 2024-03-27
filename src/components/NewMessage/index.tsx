@@ -42,8 +42,7 @@ const NewMessage = () => {
       <Button
         className="container new-message__button"
         text="Yeni Mesaj"
-        fontSize="20px"
-        fontWeight="400"
+        fontSize="18px"
         width="600px"
         onClick={openModal}
       />
