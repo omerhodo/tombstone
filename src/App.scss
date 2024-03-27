@@ -1,8 +1,10 @@
+@import '@styles/utilities/_utilities.scss';
 @import '@styles/_all';
 
 body {
-  background-color: #f3f3f3;
-  font-family: 'Roboto', sans-serif;
+  background-color: $primary-bg;
+  font-family: sans-serif, Arial, Helvetica;
+
   margin: 0;
   padding: 0;
 }
@@ -12,7 +14,17 @@ h1 {
   font-weight: bold;
 }
 
+a {
+  text-decoration: none;
+  color: $primary;
+}
+
 .is-glass{
   background: rgba( 255, 255, 255, 0.25 );
   backdrop-filter: blur( 1.5px );
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }

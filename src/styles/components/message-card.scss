@@ -5,9 +5,8 @@
   flex-direction: column;
   justify-content: space-between;
   height: 150px;
-  border: 1px solid $gold-yellow;
+  border: 1px solid $primary;
   border-radius: 10px;
-  margin-bottom: 30px;
   padding: 20px;
   cursor: pointer;
 
@@ -16,14 +15,24 @@
     align-items: center;
 
     &--title {
+      padding-left: 30px;
+      padding-right: 20px;
       text-align: center;
-      font-size: 24px;
-      color: $gold-yellow;
+      line-height: 1.2em;
+      font-size: 18px;
+      color: $primary;
+
+      @include truncate-text;
+    }
+
+    &--seperator {
+      margin-left: 30px;
+      border: 0.5px solid $primary;
     }
 
     &--avatar {
       position: absolute;
-      border: 1px solid $gold-yellow;
+      border: 1px solid $primary;
       top: -40px;
       left: -40px;
       width: 75px;
@@ -36,11 +45,15 @@
   }
 
   &__body {
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
+    @include truncate-text(3);
 
     &--text {
-      color: $grey;
+      padding-left: 30px;
+      padding-right: 20px;
+      color: $primary-light;
       font-size: 18px;
+      line-height: 1.2em;
     }
   }
 
@@ -49,8 +62,8 @@
     justify-content: flex-end;
 
     &--date {
-      color: $grey-light;
-      font-size: 16px;
+      color: $primary;
+      font-size: 14px;
     }
   }
 }

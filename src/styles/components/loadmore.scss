@@ -1,0 +1,49 @@
+@import '@styles/utilities/_utilities.scss';
+
+.loadmore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px !important;
+
+  &__search {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    width: -webkit-fill-available;
+    padding: 10px;
+    border: 2px solid $primary;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+
+    &::placeholder {
+      color: $primary;
+    }
+
+    &:hover {
+      border-color: $primary-dark;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    min-height: 50vh;
+  }
+
+  &__not-found {
+    min-height: 50vh;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color: $primary-light;
+    margin-top: 20px;
+  }
+}

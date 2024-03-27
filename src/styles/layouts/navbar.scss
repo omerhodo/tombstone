@@ -1,12 +1,17 @@
 @import '@styles/utilities/_utilities.scss';
 
 .navbar {
-  background-color: $gold-yellow-dark;
-  color: $white;
-  padding: 1rem;
+  background-color: $primary-dark;
+  color: $primary-light;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
 
   &__title {
     font-size: 22px;
@@ -21,12 +26,7 @@
   }
 
   &__link {
-    color: $white;
+    color: $primary-light;
     text-decoration: none;
-
-    &:hover {
-      text-decoration: none;
-      color: $gold-yellow;
-    }
   }
 }
