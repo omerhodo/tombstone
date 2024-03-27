@@ -1,0 +1,23 @@
+{
+  "open": "Aç",
+  "close": "Kapat",
+  "loading": "Yükleniyor...",
+  "noResults": "Sonuç bulunamadı",
+  "select": "Seç",
+  "selectPlaceholder": "Seç...",
+  "search": "Ara",
+  "disabled": "Bu öğe devre dışı bırakıldı",
+  "clear": "Temizle",
+  "login": "Giriş yap",
+  "logout": "Çıkış yap",
+  "register": "Kayıt ol",
+  "loadmore": "Daha fazla...",
+  "who_sender": "tarafından gönderilen mesaj",
+  "newMessagePlaceholder": "Mesajınızı yazın...",
+  "newMessageWarning": "*Eklenen mesaj daha sonra düzenlenemez ve silinemez.",
+  "messageSending": "Mesajınız gönderiliyor...",
+  "sendMessage": "Mesajı Gönder",
+  "loginForMessage": "Mesaj yazmak için giriş yapınız",
+  "messageAccessDenied": "Tek seferlik hakkınızı kullandınız",
+  "showingNameForMessage": "Mesajınızda görünecek isim:"
+}

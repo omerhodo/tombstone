@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Modal from '@components/Modal';
 
 import '@styles/components/message-card.scss';
@@ -11,11 +12,12 @@ interface MessageCardProps {
 }
 
 const MessageCard = ({ name, content, date }: MessageCardProps) => {
+  const { t } = useTranslation('general');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const title = `${name} tarafından gönderilen mesaj`;
+  const title = `${name} ${t('who_sender')}`;
 
   return (
     <>

@@ -1,0 +1,22 @@
+{
+  "open": "Open",
+  "close": "Close",
+  "loading": "Loading...",
+  "noResults": "No results found",
+  "select": "Select",
+  "selectPlaceholder": "Please select...",
+  "search": "Search",
+  "disabled": "This feature is disabled",
+  "clear": "Clear",
+  "login": "Log in",
+  "logout": "Log out",
+  "register": "Register",
+  "loadmore": "Load more",
+  "newMessagePlaceholder": "Write your message...",
+  "newMessageWarning": "*The added message cannot be edited or deleted later.",
+  "messageSending": "Your message is being sent...",
+  "sendMessage": "Send Message",
+  "loginForMessage": "Please log in to send a message",
+  "messageAccessDenied": "You have used your one-time right",
+  "showingNameForMessage": "Name that will appear in your message:"
+}
