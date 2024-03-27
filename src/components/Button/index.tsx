@@ -2,7 +2,7 @@ import '@styles/components/button.scss';
 
 const Button = ({
   bgColor = 'transparent',
-  textColor = 'burlywood',
+  textColor = '#2c15B0',
   radius = 10,
   width = 'none',
   text = 'buton',

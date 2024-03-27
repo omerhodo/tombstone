@@ -1,5 +1,7 @@
+@import '@styles/utilities/_utilities.scss';
+
 .border-gold {
-  border: 1px solid burlywood;
+  border: 1px solid $primary;
 }
 
 .is-hidden {

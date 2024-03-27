@@ -4,6 +4,8 @@ import Button from '@components/Button';
 import Modal from '@components/Modal';
 import { useAuth } from '@contexts/AuthContext';
 
+import GoogleSignInButton from '@/components/GoogleSignInButton';
+
 import '@styles/components/new-message.scss';
 
 const NewMessage = () => {
@@ -67,11 +69,10 @@ const NewMessage = () => {
               )}
             </>
           ) : (
-            <>
-              <label className="new-message__warning">
-                Mesaj yazmak için giriş yapınız
-              </label>
-            </>
+            <div className="new-message__warning">
+              <label className="mb-30">Mesaj yazmak için giriş yapınız</label>
+              <GoogleSignInButton />
+            </div>
           )}
         </div>
       </Modal>

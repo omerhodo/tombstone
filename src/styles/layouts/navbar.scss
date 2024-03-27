@@ -1,8 +1,8 @@
 @import '@styles/utilities/_utilities.scss';
 
 .navbar {
-  background-color: $gold-yellow-dark;
-  color: $white;
+  background-color: $primary-dark;
+  color: $primary-light;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -21,12 +21,12 @@
   }
 
   &__link {
-    color: $white;
+    color: $primary-light;
     text-decoration: none;
 
     &:hover {
       text-decoration: none;
-      color: $gold-yellow;
+      color: $primary;
     }
   }
 }

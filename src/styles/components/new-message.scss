@@ -3,24 +3,28 @@
 .new-message {
   display: flex;
   flex-direction: column;
-  color: burlywood;
+  color: $primary-dark;
 
   &__name {
     font-size: 20px;
-    color: $gold-yellow-dark;
+    color: $primary-dark;
     margin-bottom: 15px;
   }
 
   &__text-area {
     min-height: 150px;
     padding: 10px;
-    border: 1px solid $gold-yellow;
+    border: 1px solid $primary-dark;
     border-radius: 10px;
     color: $grey;
     margin-bottom: 60px;
   }
 
   &__warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     color: $red;
     font-size: 20px;
