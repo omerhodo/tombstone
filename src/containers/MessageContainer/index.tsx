@@ -13,19 +13,22 @@ interface Message {
 
 interface MessageContainerProps {
   messages: Message[];
+  loading: boolean;
 }
 
-const MessageContainer = ({ messages }: MessageContainerProps) => {
+const MessageContainer = ({ messages, loading }: MessageContainerProps) => {
   return (
     <div className="container message-container">
-      {messages.map((message, index) => (
-        <MessageCard
-          key={index}
-          name={message.userName}
-          content={message.content}
-          date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
-        />
-      ))}
+      {loading && <div>Loading...</div>}
+      {!loading &&
+        messages.map((message, index) => (
+          <MessageCard
+            key={index}
+            name={message.userName}
+            content={message.content}
+            date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
+          />
+        ))}
     </div>
   );
 };
