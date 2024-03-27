@@ -36,7 +36,8 @@
   }
 
   &__body {
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
+    @include truncate-text(3);
 
     &--text {
       color: $grey;

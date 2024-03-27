@@ -62,6 +62,9 @@ const NewMessage = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Mesajınızı Yazınız"
               />
+              <span className="new-message__warn-text">
+                *Eklenen mesaj daha sonra düzenlenemez ve silinemez.
+              </span>
               {isLoading ? (
                 <label className="new-message__loading">
                   Mesajınız gönderiliyor...

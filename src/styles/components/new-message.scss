@@ -12,6 +12,7 @@
 
     &--info {
       font-size: 14px;
+      margin-left: 5px;
       margin-right: 5px;
       color: $primary;
     }
@@ -23,9 +24,9 @@
     border: 1px solid $primary-dark;
     border-radius: 10px;
     color: $grey;
-    margin-bottom: 60px;
+    margin-bottom: 5px;
   }
-
+  
   &__warning {
     display: flex;
     justify-content: center;
@@ -34,5 +35,12 @@
     text-align: center;
     color: $red;
     font-size: 20px;
+  }
+  
+  &__warn-text {
+    font-size: 14px;
+    color: $primary;
+    margin-left: 5px;
+    margin-bottom: 60px;
   }
 }
