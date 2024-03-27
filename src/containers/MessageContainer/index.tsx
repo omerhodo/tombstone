@@ -11,14 +11,16 @@ const MessageContainer = () => {
     <div className="container message-container">
       {loading && <div>Loading...</div>}
       {!loading &&
-        messages.map((message, index) => (
-          <MessageCard
-            key={index}
-            name={message.userName}
-            content={message.content}
-            date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
-          />
-        ))}
+        messages
+          .slice(0, 6)
+          .map((message, index) => (
+            <MessageCard
+              key={index}
+              name={message.userName}
+              content={message.content}
+              date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
+            />
+          ))}
     </div>
   );
 };
