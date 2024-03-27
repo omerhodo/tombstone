@@ -31,7 +31,7 @@ const About = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <Link to="/">
-          <Button text="Anasayfa'ye dön" />
+          <Button text="Anasayfa" />
         </Link>
       </div>
       <div className="all-messages__content">
