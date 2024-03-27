@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
+import { useMessages } from '@/contexts/MessagesContext';
 
 import MessageCard from '@components/MessageCard';
 import Modal from '@components/Modal';
@@ -7,19 +8,8 @@ import Button from '@components/Button';
 
 import '@/styles/components/loadmore.scss';
 
-interface Message {
-  userName: string;
-  content: string;
-  createdAt: {
-    toDate: () => Date;
-  };
-}
-
-interface LoadMoreProps {
-  messages: Message[];
-}
-
-const LoadMore = ({ messages }: LoadMoreProps) => {
+const LoadMore = () => {
+  const { messages, loading } = useMessages();
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [visibleMessages, setVisibleMessages] = useState<number>(10);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,11 +36,9 @@ const LoadMore = ({ messages }: LoadMoreProps) => {
           placeholder="Mesajı yazan kişiyi arayın..."
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        {filteredMessages.length === 0 && (
-          <p className="loadmore__not-found">Kişi bulunamadı.</p>
-        )}
+        {loading && <p className="loadmore__not-found">Kişi bulunamadı.</p>}
         <div className="loadmore__body">
-          {filteredMessages.length !== 0 &&
+          {!loading &&
             filteredMessages.map((message, index) => (
               <MessageCard
                 key={index}
