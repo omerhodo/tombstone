@@ -9,13 +9,17 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <img src={Logo} className="navbar--logo" alt="Logo" />
+      <Link to="/about">
+        <img src={Logo} className="navbar--logo" alt="Logo" />
+      </Link>
       <div className="navbar__title">
-        <Link className="navbar__link" to="/about">
+        <Link className="navbar__link" to="/">
           {t('title')}
         </Link>
       </div>
-      <img src={Logo} className="navbar--logo" alt="Logo" />
+      <Link to="/about">
+        <img src={Logo} className="navbar--logo" alt="Logo" />
+      </Link>
     </nav>
   );
 };
