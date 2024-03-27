@@ -17,7 +17,7 @@ const GoogleSignInButton = () => {
 
   useEffect(() => {
     const sendDataToFirestore = async () => {
-      if (userInfo) {
+      if (userInfo && userInfo.email) {
         const userRef = doc(db, 'users', userInfo.email);
         const userSnap = await getDoc(userRef);
 
