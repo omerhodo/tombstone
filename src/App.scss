@@ -1,7 +1,8 @@
+@import '@styles/utilities/_utilities.scss';
 @import '@styles/_all';
 
 body {
-  background-color: #877dbe;
+  background-color: $primary-bg;
   font-family: sans-serif, Arial, Helvetica;
 
   margin: 0;

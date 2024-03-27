@@ -21,9 +21,8 @@
   max-width: 500px;
   min-height: 50vh;
   max-height: 80vh;
-  background-color: $primary-light;
   border-radius: 10px;
-
+  
   @include mobile {
     max-width: 90vw;
     min-height: 90vh;
@@ -44,7 +43,7 @@
     font-size: 20px;
     line-height: 1.2em;
     padding-right: 15px;
-
+    
     @include truncate-text;
   }
   
@@ -58,8 +57,12 @@
   
   &__body {
     padding: 20px;
-    color: $grey;
+    color: $primary-light;
     overflow-y: auto;
     flex: 1;
+    border-radius: 0 0 10px 10px;
+    background-color: $primary-bg;
+    background-repeat: 'repeat';
+    background-image: url('@/assets/images/main/bg-image.png');
   }
 }
