@@ -52,7 +52,9 @@ const NewMessage = () => {
           {currentUser ? (
             <>
               <label className="new-message__name">
-                <span className="mr-5">Mesajınızda görünecek isim:</span>
+                <span className="new-message__name--info">
+                  Mesajınızda görünecek isim:
+                </span>
                 {currentUser?.displayName}
               </label>
               <textarea
