@@ -57,6 +57,17 @@
     margin-left: 5px;
     margin-bottom: 60px;
   }
+
+  &--access-denied {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: $red;
+    font-size: 20px;
+    margin-top: 50px;
+  }
 }
 
 .message-modal {

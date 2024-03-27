@@ -9,6 +9,7 @@ import { getData } from '@/firebase';
 
 interface Message {
   userName: string;
+  email: string;
   content: string;
   createdAt: {
     toDate: () => Date;
