@@ -3,6 +3,7 @@ import { sendData } from '@/firebase';
 import Button from '@components/Button';
 import Modal from '@components/Modal';
 import { useAuth } from '@contexts/AuthContext';
+import { notify } from '@components/Toastify';
 
 import GoogleSignInButton from '@/components/GoogleSignInButton';
 
@@ -27,8 +28,10 @@ const NewMessage = () => {
         content: messageTrimmed,
         createdAt: new Date(),
       });
+      notify('Mesajınız başarıyla gönderildi');
     } catch (error) {
-      console.error('Error sending message: ', error);
+      notify('Bir hata oluştu');
+      console.log(error);
     } finally {
       setIsLoading(false);
     }
@@ -36,6 +39,7 @@ const NewMessage = () => {
 
   const handleSubmit = () => {
     sendMessage();
+    closeModal();
   };
   return (
     <>
