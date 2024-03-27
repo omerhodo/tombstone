@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
+import useScrollToTop from '@hooks/useScrollToTop';
 
 import Button from '@/components/Button';
 
 const About = () => {
+  useScrollToTop();
+
   return (
     <div className="about container">
       <h1 className="about--title">Sevgili Misafir...</h1>

@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import { useMessages } from '@/contexts/MessagesContext';
+import useScrollToTop from '@hooks/useScrollToTop';
 
 import MessageCard from '@components/MessageCard';
 import Button from '@/components/Button';
 
-const About = () => {
+const AllMessages = () => {
+  useScrollToTop();
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [visibleMessages, setVisibleMessages] = useState<number>(10);
   const { messages } = useMessages();
@@ -52,4 +54,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AllMessages;
