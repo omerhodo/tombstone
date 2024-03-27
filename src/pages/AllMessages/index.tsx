@@ -23,27 +23,31 @@ const About = () => {
 
   return (
     <div className="all-messages container">
-      <input
-        type="text"
-        className="loadmore__search"
-        placeholder="Mesajı yazan kişiyi arayın..."
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      {filteredMessages.length !== 0 &&
-        filteredMessages.map((message, index) => (
-          <MessageCard
-            key={index}
-            name={message.userName}
-            content={message.content}
-            date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
-          />
-        ))}
+      <div className="all-messages__search">
+        <input
+          className="all-messages__search--input"
+          type="text"
+          placeholder="Mesajı yazan kişiyi arayın..."
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <Link to="/">
+          <Button text="Anasayfa'ye dön" />
+        </Link>
+      </div>
+      <div className="all-messages__content">
+        {filteredMessages.length !== 0 &&
+          filteredMessages.map((message, index) => (
+            <MessageCard
+              key={index}
+              name={message.userName}
+              content={message.content}
+              date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
+            />
+          ))}
+      </div>
       {visibleMessages < filteredMessages.length && (
         <button onClick={loadMore}>Load More</button>
       )}
-      <Link to="/" className="all-messages--return">
-        <Button text="Anasayfa" />
-      </Link>
     </div>
   );
 };

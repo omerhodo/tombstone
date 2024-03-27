@@ -1,13 +1,16 @@
+import { Link } from 'react-router-dom';
 import NewMessage from '@components/NewMessage';
 import MessageContainer from '@containers/MessageContainer';
-import LoadMore from '@components/LoadMore';
+import Button from '@components/Button';
 
 const Home = () => {
   return (
     <>
       <NewMessage />
       <MessageContainer />
-      <LoadMore />
+      <Link to="/all-messages" className="container">
+        <Button text="Tüm Mesajlar" />
+      </Link>
     </>
   );
 };
