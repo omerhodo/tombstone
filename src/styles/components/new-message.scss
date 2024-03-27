@@ -44,3 +44,12 @@
     margin-bottom: 60px;
   }
 }
+
+.message-modal {
+  font-size: 18px;
+  color: $grey;
+
+  &__content {
+    text-align: center;
+  }
+}

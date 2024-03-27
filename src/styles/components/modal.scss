@@ -14,11 +14,15 @@
 }
 
 .modal {
+  display: flex;
+  position: relative;
+  flex-direction: column;
   min-width: 50vw;
+  max-width: 500px;
   min-height: 50vh;
+  max-height: 80vh;
   background-color: $primary-light;
   border-radius: 10px;
-  position: relative;
   
   &__header {
     display: flex;
@@ -29,12 +33,12 @@
     background-color: $primary-dark;
     padding: 20px;
   }
-
+  
   &__title{
     color: $primary-light;
     font-size: 20px;
   }
-
+  
   &__close {
     background-color: transparent;
     border: none;
@@ -42,9 +46,11 @@
     font-size: 20px;
     color: $primary-light;
   }
-
+  
   &__body {
     padding: 20px;
     color: $grey;
+    overflow-y: auto;
+    flex: 1;
   }
 }
