@@ -5,15 +5,16 @@ interface MessageData {
   userName?: string | null;
   email?: string | null;
   content?: string;
+  role?: string;
   createdAt?: Date;
 }
 
 const sendData = async (
   type: string,
-  { userName, email, content, createdAt }: MessageData
+  { userName, email, content, createdAt, role }: MessageData
 ) => {
   const docData = Object.fromEntries(
-    Object.entries({ userName, email, content, createdAt }).filter(
+    Object.entries({ userName, email, content, role, createdAt }).filter(
       ([_, value]) => value !== undefined
     )
   );
