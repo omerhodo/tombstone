@@ -1,4 +1,5 @@
 {
+  "mainpage": "Mainpage",
   "open": "Open",
   "close": "Close",
   "loading": "Loading...",
@@ -18,5 +19,9 @@
   "sendMessage": "Send Message",
   "loginForMessage": "Please log in to send a message",
   "messageAccessDenied": "You have used your one-time right",
-  "showingNameForMessage": "Name that will appear in your message:"
+  "showingNameForMessage": "Name that will appear in your message:",
+  "allMessages": "All Messages",
+  "aboutTitle": "Dear Guest...",
+  "aboutFirst": "We are not sure whether I can read the articles written here.",
+  "aboutSecond": "I ask you, when you come here, if you want, share your memories and thoughts about me, maybe the funny moments you had with me or the moments you hated me. So that this virtual tombstone can turn into a rare collection."
 }

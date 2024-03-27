@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import { useMessages } from '@/contexts/MessagesContext';
+import { useTranslation } from 'react-i18next';
 import useScrollToTop from '@hooks/useScrollToTop';
 
 import MessageCard from '@components/MessageCard';
@@ -9,6 +10,7 @@ import Button from '@/components/Button';
 
 const AllMessages = () => {
   useScrollToTop();
+  const { t } = useTranslation('general');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [visibleMessages, setVisibleMessages] = useState<number>(10);
   const { messages } = useMessages();
@@ -33,7 +35,7 @@ const AllMessages = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <Link to="/">
-          <Button text="Anasayfa" />
+          <Button text={t('mainpage')} />
         </Link>
       </div>
       <div className="all-messages__content">
@@ -48,7 +50,7 @@ const AllMessages = () => {
           ))}
       </div>
       {visibleMessages < filteredMessages.length && (
-        <button onClick={loadMore}>Load More</button>
+        <button onClick={loadMore}>{t('loadmore')}</button>
       )}
     </div>
   );

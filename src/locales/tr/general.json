@@ -1,4 +1,5 @@
 {
+  "mainpage": "Anasayfa",
   "open": "Aç",
   "close": "Kapat",
   "loading": "Yükleniyor...",
@@ -19,5 +20,9 @@
   "sendMessage": "Mesajı Gönder",
   "loginForMessage": "Mesaj yazmak için giriş yapınız",
   "messageAccessDenied": "Tek seferlik hakkınızı kullandınız",
-  "showingNameForMessage": "Mesajınızda görünecek isim:"
+  "showingNameForMessage": "Mesajınızda görünecek isim:",
+  "allMessages": "Tüm Mesajlar",
+  "aboutTitle": "Sevgili Misafir...",
+  "aboutFirst": "Burada yazılan yazıları benim okuyup okuyamadığımdan emin değiliz.",
+  "aboutSecond": "Sizden ricam, buraya uğradığınızda, eğer canınız isterse benimle ilgili anılarınızı, düşüncelerinizi, belki de benimle yaşadığınız komik anları ya da benden nefret ettiğiniz anları paylaşmanız. Böylece bu sanal tombstone, nadide bir koleksiyona dönüşsün."
 }

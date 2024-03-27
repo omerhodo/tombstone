@@ -1,21 +1,20 @@
 import { Link } from 'react-router-dom';
 import useScrollToTop from '@hooks/useScrollToTop';
+import { useTranslation } from 'react-i18next';
 
 import Button from '@/components/Button';
 
 const About = () => {
   useScrollToTop();
+  const { t } = useTranslation('general');
 
   return (
     <div className="about container">
-      <h1 className="about--title">Sevgili Misafir...</h1>
+      <h1 className="about--title">{t('aboutTitle')}</h1>
       <p className="about--description">
-        Burada yazılan yazıları benim okuyup okuyamadığımdan emin değiliz.
+        {t('aboutFirst')}
         <br />
-        Sizden ricam, buraya uğradığınızda, eğer canınız isterse benimle ilgili
-        anılarınızı, düşüncelerinizi, belki de benimle yaşadığınız komik anları
-        ya da benden nefret ettiğiniz anları paylaşmanız. Böylece bu sanal
-        tombstone, nadide bir koleksiyona dönüşsün.
+        {t('aboutSecond')}
       </p>
       <Link to="/" className="about--return">
         <Button text="Anasayfa" />
