@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30px !important;
-  min-height: 50vh;
 
   &__search {
     display: inline-flex;
@@ -36,9 +35,11 @@
     align-items: center;
     gap: 40px;
     padding: 20px;
+    min-height: 50vh;
   }
 
   &__not-found {
+    min-height: 50vh;
     display: block;
     text-align: center;
     font-size: 30px;
