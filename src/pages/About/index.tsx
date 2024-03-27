@@ -17,7 +17,7 @@ const About = () => {
         {t('aboutSecond')}
       </p>
       <Link to="/" className="about--return">
-        <Button text="Anasayfa" />
+        <Button text={t('mainpage')} />
       </Link>
     </div>
   );
