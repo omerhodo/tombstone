@@ -23,6 +23,7 @@ const MessageCard = ({ name, content, date }: MessageCardProps) => {
         <div className="message-card__header mb-20">
           <img className="message-card__header--avatar" src={Tree} alt="User" />
           <h2 className="message-card__header--title">{name}</h2>
+          <hr className="message-card__header--seperator" />
         </div>
         <div className="message-card__body">
           <p className="message-card__body--text">{content}</p>
