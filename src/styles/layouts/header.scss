@@ -3,16 +3,18 @@
 .header {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  min-height: 300px;
-  
+  align-items: center;  
   
   &__image {
+    display: block;
     width: 700px;
     max-width: 90vw;
     border: 2px solid $primary;
     border-radius: 10px;
+    margin-bottom: 30px;
+
+    @include to-tablet {
+      margin-bottom: 30px;
+    }
   }
 }

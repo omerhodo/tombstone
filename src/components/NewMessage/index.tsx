@@ -40,7 +40,7 @@ const NewMessage = () => {
   return (
     <>
       <Button
-        className="container mb-60 is-cursor-pointer"
+        className="container new-message__button"
         text="Yeni Mesaj"
         fontSize="20px"
         fontWeight="400"

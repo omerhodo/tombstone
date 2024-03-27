@@ -3,10 +3,15 @@
 .navbar {
   background-color: $primary-dark;
   color: $primary-light;
-  padding: 1rem;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
 
   &__title {
     font-size: 22px;

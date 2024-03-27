@@ -4,7 +4,7 @@ import '@styles/layouts/header.scss';
 
 const Header = () => {
   return (
-    <div className="header mb-30">
+    <div className="header">
       <img className="header__image" src={MainImage} alt="MainImage" />
     </div>
   );
