@@ -7,9 +7,21 @@ import Button from '@components/Button';
 
 import '@/styles/components/loadmore.scss';
 
-const LoadMore = ({ messages }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [visibleMessages, setVisibleMessages] = useState(10);
+interface Message {
+  userName: string;
+  content: string;
+  createdAt: {
+    toDate: () => Date;
+  };
+}
+
+interface LoadMoreProps {
+  messages: Message[];
+}
+
+const LoadMore = ({ messages }: LoadMoreProps) => {
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [visibleMessages, setVisibleMessages] = useState<number>(10);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
