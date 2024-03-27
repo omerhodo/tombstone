@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
 import { useMessages } from '@contexts/MessagesContext';
+import { useTranslation } from 'react-i18next';
 
 import MessageCard from '@components/MessageCard';
 import Modal from '@components/Modal';
@@ -9,6 +10,7 @@ import Button from '@components/Button';
 import '@/styles/components/loadmore.scss';
 
 const LoadMore = () => {
+  const { t } = useTranslation('general');
   const { messages, loading } = useMessages();
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [visibleMessages, setVisibleMessages] = useState<number>(10);
@@ -49,7 +51,7 @@ const LoadMore = () => {
             ))}
         </div>
         {visibleMessages < messages.length && (
-          <button onClick={loadMore}>Load More</button>
+          <button onClick={loadMore}>{t('loadmore')}</button>
         )}
       </Modal>
     </div>

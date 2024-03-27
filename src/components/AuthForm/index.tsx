@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { signIn, signUp, signOutUser } from '@/firebase';
 import { useAuth } from '@contexts/AuthContext';
+import { useTranslation } from 'react-i18next';
 
 import GoogleSignInButton from '@/components/GoogleSignInButton';
 
 const AuthForm = () => {
+  const { t } = useTranslation('general');
   const [isLogin, setIsLogin] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -43,7 +45,7 @@ const AuthForm = () => {
     <>
       {isLogin && (
         <button onClick={signOutUser} className="logout-button mb-5">
-          Logout
+          {t('logout')}
         </button>
       )}
       {!isLogin && (
@@ -68,10 +70,10 @@ const AuthForm = () => {
                 }}
               />
               <button type="submit" onClick={_login} className="mb-5">
-                Login
+                {t('login')}
               </button>
               <button type="submit" onClick={_register} className="mb-5">
-                Register
+                {t('register')}
               </button>
             </form>
           )}

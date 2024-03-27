@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import './i18n';
 import { AuthProvider } from '@contexts/AuthContext';
 import { MessagesProvider } from '@contexts/MessagesContext';
 import MainLayout from '@layouts/MainLayout';
