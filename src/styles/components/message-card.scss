@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 150px;
-  border: 1px solid $gold-yellow;
+  border: 1px solid $primary;
   border-radius: 10px;
   margin-bottom: 30px;
   padding: 20px;
@@ -18,12 +18,12 @@
     &--title {
       text-align: center;
       font-size: 24px;
-      color: $gold-yellow;
+      color: $primary;
     }
 
     &--avatar {
       position: absolute;
-      border: 1px solid $gold-yellow;
+      border: 1px solid $primary;
       top: -40px;
       left: -40px;
       width: 75px;
@@ -36,7 +36,8 @@
   }
 
   &__body {
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
+    @include truncate-text(3);
 
     &--text {
       color: $grey;

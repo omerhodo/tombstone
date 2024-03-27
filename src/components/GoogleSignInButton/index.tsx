@@ -1,22 +1,28 @@
-// src/components/GoogleSignInButton.js
 import { auth } from '@/firebase';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+
+import GoogleSvg from '@/assets/images/svg/google.svg';
 
 const GoogleSignInButton = () => {
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
-        // Google ile giriş başarılı
         console.log(result.user);
       })
       .catch((error) => {
-        // Hata işleme
         console.error(error);
       });
   };
 
-  return <button onClick={signInWithGoogle}>Google ile Giriş Yap</button>;
+  return (
+    <img
+      className="google-button"
+      src={GoogleSvg}
+      alt="Google Logo"
+      onClick={signInWithGoogle}
+    />
+  );
 };
 
 export default GoogleSignInButton;

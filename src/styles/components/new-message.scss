@@ -3,26 +3,53 @@
 .new-message {
   display: flex;
   flex-direction: column;
-  color: burlywood;
+  color: $primary-dark;
 
   &__name {
     font-size: 20px;
-    color: $gold-yellow-dark;
+    color: $primary-dark;
     margin-bottom: 15px;
+
+    &--info {
+      font-size: 14px;
+      margin-left: 5px;
+      margin-right: 5px;
+      color: $primary;
+    }
   }
 
   &__text-area {
     min-height: 150px;
     padding: 10px;
-    border: 1px solid $gold-yellow;
+    border: 1px solid $primary-dark;
     border-radius: 10px;
     color: $grey;
-    margin-bottom: 60px;
+    margin-bottom: 5px;
   }
-
+  
   &__warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     color: $red;
     font-size: 20px;
+  }
+  
+  &__warn-text {
+    font-size: 14px;
+    color: $primary;
+    margin-left: 5px;
+    margin-bottom: 60px;
+  }
+}
+
+.message-modal {
+  font-size: 18px;
+  color: $grey;
+
+  &__content {
+    text-align: center;
   }
 }

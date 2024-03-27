@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getData } from '@/firebase';
 import MessageCard from '@components/MessageCard';
+import dayjs from 'dayjs';
 
 import '@styles/containers/message-container.scss';
 
@@ -8,21 +9,29 @@ const MessageContainer = () => {
   const [messages, setMessages] = useState<any[]>([]);
 
   const getMessages = async () => {
-    const data = await getData('messages');
-    setMessages(data);
+    try {
+      const data = await getData('messages');
+      setMessages(data);
+    } catch (error) {
+      console.error('Mesajlar getirilirken hata oluştu: ', error);
+    }
   };
 
   useEffect(() => {
     getMessages();
-    console.log(messages);
   }, []);
 
   return (
     <>
       <div className="container message-container">
-        <MessageCard />
-        <MessageCard />
-        <MessageCard />
+        {messages.map((message) => (
+          <MessageCard
+            key={message.id}
+            name={message.userName}
+            content={message.content}
+            date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
+          />
+        ))}
       </div>
     </>
   );

@@ -42,7 +42,7 @@ const AuthForm = () => {
   return (
     <>
       {isLogin && (
-        <button onClick={signOutUser} className="mb-5">
+        <button onClick={signOutUser} className="logout-button mb-5">
           Logout
         </button>
       )}

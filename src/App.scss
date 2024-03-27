@@ -16,3 +16,8 @@ h1 {
   background: rgba( 255, 255, 255, 0.25 );
   backdrop-filter: blur( 1.5px );
 }
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
