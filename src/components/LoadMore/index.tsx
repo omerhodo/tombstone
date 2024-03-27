@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
-import { useMessages } from '@/contexts/MessagesContext';
+import { useMessages } from '@contexts/MessagesContext';
 
 import MessageCard from '@components/MessageCard';
 import Modal from '@components/Modal';

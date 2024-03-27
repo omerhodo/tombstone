@@ -1,22 +1,12 @@
 import dayjs from 'dayjs';
 import MessageCard from '@components/MessageCard';
+import { useMessages } from '@contexts/MessagesContext';
 
 import '@styles/containers/message-container.scss';
 
-interface Message {
-  userName: string;
-  content: string;
-  createdAt: {
-    toDate: () => Date;
-  };
-}
+const MessageContainer = () => {
+  const { messages, loading } = useMessages();
 
-interface MessageContainerProps {
-  messages: Message[];
-  loading: boolean;
-}
-
-const MessageContainer = ({ messages, loading }: MessageContainerProps) => {
   return (
     <div className="container message-container">
       {loading && <div>Loading...</div>}
