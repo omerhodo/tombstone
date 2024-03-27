@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { auth, db } from '@/firebase';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { notify } from '@components/Toastify';
 
 import GoogleSvg from '@/assets/images/svg/google.svg';
 
@@ -19,10 +20,14 @@ const GoogleSignInButton = () => {
     const sendDataToFirestore = async () => {
       if (userInfo && userInfo.email) {
         const userRef = doc(db, 'users', userInfo.email);
-        const userSnap = await getDoc(userRef);
-
-        if (!userSnap.exists()) {
-          await setDoc(userRef, userInfo);
+        try {
+          const userSnap = await getDoc(userRef);
+          notify('Giriş başarılı');
+          if (!userSnap.exists()) {
+            await setDoc(userRef, userInfo);
+          }
+        } catch (error) {
+          console.error(error);
         }
       }
     };

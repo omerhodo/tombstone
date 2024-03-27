@@ -6,6 +6,7 @@ import MainLayout from '@layouts/MainLayout';
 import Home from '@pages/Home';
 import About from '@pages/About';
 import AllMessages from '@pages/AllMessages';
+import { ToastContainer } from '@components/Toastify';
 
 import './App.scss';
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <AuthProvider>
       <MessagesProvider>
+        <ToastContainer />
         <Router>
           <Routes>
             <Route path="/" element={<MainLayout children={<Home />} />} />
