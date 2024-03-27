@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom';
+
+import Button from '@/components/Button';
+
 const About = () => {
   return (
     <div className="about container">
@@ -10,6 +14,9 @@ const About = () => {
         ya da benden nefret ettiğiniz anları paylaşmanız. Böylece bu sanal
         tombstone, nadide bir koleksiyona dönüşsün.
       </p>
+      <Link to="/" className="about--return">
+        <Button text="Anasayfa" />
+      </Link>
     </div>
   );
 };
