@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: space-between;
   height: 150px;
-  border: 1px solid $primary;
   border-radius: 10px;
   padding: 20px;
   cursor: pointer;
@@ -20,7 +19,7 @@
       text-align: center;
       line-height: 1.2em;
       font-size: 18px;
-      color: $primary;
+      color: $primary-light;
 
       @include truncate-text;
     }
@@ -32,14 +31,12 @@
 
     &--avatar {
       position: absolute;
-      border: 1px solid $primary;
       top: -40px;
       left: -40px;
       width: 75px;
       height: 75px;
       border-radius: 50%;
-      object-fit: cover;
-      background: rgba(110, 194, 110, 0.799);
+      background: #2c15B070;
       backdrop-filter: blur( 50px );
     }
   }
