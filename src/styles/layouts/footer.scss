@@ -3,10 +3,16 @@
 .footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 30px;
   min-height: 200px;
   background-color: $primary-dark;
   color: $primary-light;
+
+  &__quote {
+    line-height: 1.2em;
+    text-align: end;
+    width: -webkit-fill-available;
+  }
 }
