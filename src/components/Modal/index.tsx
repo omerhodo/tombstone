@@ -29,7 +29,7 @@ const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal__header">
           <label className="modal__title">{title}</label>
-          <span className="modal__close" onClick={onClose}>
+          <span className="modal__close is-flex-center" onClick={onClose}>
             <img className="modal__close--icon" src={CloseIcon} alt="User" />
           </span>
         </div>
