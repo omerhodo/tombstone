@@ -37,6 +37,10 @@ const MessageCard = ({ name, content, date }: MessageCardProps) => {
       <Modal isOpen={isModalOpen} onClose={closeModal} title={title}>
         <div className="message-modal">
           <p className="message-modal__content">{content}</p>
+          <p className="message-modal__footer">
+            <span className="message-modal__button mr-10">{t('approve')}</span>
+            <span className="message-modal__button">{t('remove')}</span>
+          </p>
         </div>
       </Modal>
     </>

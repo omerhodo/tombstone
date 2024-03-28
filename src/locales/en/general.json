@@ -2,6 +2,8 @@
   "mainpage": "Mainpage",
   "open": "Open",
   "close": "Close",
+  "remove": "Remove",
+  "approve": "Approve",
   "loading": "Loading...",
   "noResults": "No results found",
   "select": "Select",

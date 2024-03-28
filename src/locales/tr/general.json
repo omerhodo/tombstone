@@ -2,6 +2,8 @@
   "mainpage": "Anasayfa",
   "open": "Aç",
   "close": "Kapat",
+  "remove": "Sil",
+  "approve": "Onayla",
   "loading": "Mezarlık yükleniyor...",
   "noResults": "Sonuç bulunamadı",
   "select": "Seç",
