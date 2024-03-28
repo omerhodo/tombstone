@@ -1,4 +1,5 @@
 import { ReactNode, useEffect } from 'react';
+import CloseIcon from '@/assets/images/svg/closeIcon.svg';
 
 import '@styles/components/modal.scss';
 interface ModalProps {
@@ -29,7 +30,7 @@ const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
         <div className="modal__header">
           <label className="modal__title">{title}</label>
           <span className="modal__close" onClick={onClose}>
-            X
+            <img className="modal__close--icon" src={CloseIcon} alt="User" />
           </span>
         </div>
         <div className="modal__body">{children}</div>
