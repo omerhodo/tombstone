@@ -35,7 +35,10 @@ const AllMessages = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <Link to="/">
-          <Button text={t('mainpage')} />
+          <Button
+            className="all-messages__search--button"
+            text={t('mainpage')}
+          />
         </Link>
       </div>
       <div className="all-messages__content">
