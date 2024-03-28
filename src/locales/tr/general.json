@@ -30,10 +30,11 @@
   "showingNameForMessage": "Dileğinizde görünecek isim:",
   "allMessages": "Tüm dilekler",
   "whoSentMessage": "Dileği gönderen kişiyi arayın...",
-  "aboutTitle": "Sevgili Misafir...",
-  "aboutFirst": "Burada yazdıklarınızı okuyacağımı bilemeyiz.",
-  "aboutSecond": "Sizden isteğim buraya uğrarsanız, eğer canınız isterse benimle ilgili iyi, komik, kötü, saçma anılarınızı ya da düşüncelerinizi paylaşmanız. Böylece bu sanal tombstone nadide bir koleksiyona dönüşür veya soluk bir mezar taşı olarak katılaşır.",
+  "manifestTitle": "Sevgili Misafir...",
+  "manifestFirst": "Burada yazdıklarınızı okuyacağımı bilemeyiz.",
+  "manifestSecond": "Sizden isteğim buraya uğrarsanız, eğer canınız isterse benimle ilgili iyi, komik, kötü, saçma anılarınızı ya da düşüncelerinizi paylaşmanız. Böylece bu sanal tombstone nadide bir koleksiyona dönüşür veya soluk bir mezar taşı olarak katılaşır.",
   "footerQuote": "İklim için cennete, insanları için cehenneme gidilir. <br/>-Mark Twain",
   "messageDeleted": "Dilek silindi",
-  "messageApproved": "Dilek onaylandı"
+  "messageApproved": "Dilek onaylandı",
+  "manifest": "Manifesto"
 }

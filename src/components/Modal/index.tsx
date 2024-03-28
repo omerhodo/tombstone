@@ -2,10 +2,10 @@ import { ReactNode, useEffect } from 'react';
 
 import '@styles/components/modal.scss';
 interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  title: string;
-  children: ReactNode;
+  isOpen?: boolean;
+  onClose?: () => void;
+  title?: string;
+  children?: ReactNode;
 }
 
 const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {

@@ -30,10 +30,11 @@
   "showingNameForMessage": "Name that will appear in your message:",
   "allMessages": "All Messages",
   "whoSentMessage": "Search the person who sent the wish...",
-  "aboutTitle": "Dear Guest...",
-  "aboutFirst": "We are not sure whether I can read the articles written here.",
-  "aboutSecond": "I ask you, when you come here, if you want, share your memories and thoughts about me, maybe the funny moments you had with me or the moments you hated me. So that this virtual tombstone can turn into a rare collection.",
+  "manifestTitle": "Dear Guest...",
+  "manifestFirst": "We are not sure whether I can read the articles written here.",
+  "manifestSecond": "I ask you, when you come here, if you want, share your memories and thoughts about me, maybe the funny moments you had with me or the moments you hated me. So that this virtual tombstone can turn into a rare collection.",
   "footerQuote": "Go to Heaven for the climate, Hell for the company. <br/>-Mark Twain",
   "messageDeleted": "Message deleted",
-  "messageApproved": "Message approved"
+  "messageApproved": "Message approved",
+  "manifest": "Manifest"
 }
