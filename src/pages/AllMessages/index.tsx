@@ -1,9 +1,9 @@
-import { useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import dayjs from 'dayjs';
-import { useMessages } from '@/contexts/MessagesContext';
 import { useTranslation } from 'react-i18next';
+import { getData } from '@/firebase';
 import useScrollToTop from '@hooks/useScrollToTop';
+import dayjs from 'dayjs';
 
 import MessageCard from '@components/MessageCard';
 import Button from '@/components/Button';
@@ -12,8 +12,15 @@ const AllMessages = () => {
   useScrollToTop();
   const { t } = useTranslation('general');
   const [visibleMessages, setVisibleMessages] = useState<number>(9);
-  const { messages } = useMessages();
-  const [filteredMessages, setFilteredMessages] = useState(messages); // Add a state for filtered messages
+  const [filteredMessages, setFilteredMessages] = useState<any[]>([]);
+  const [messages, setMessages] = useState<any[]>([]);
+
+  useEffect(() => {
+    getData('messages').then((data) => {
+      setMessages(data);
+      setFilteredMessages(data);
+    });
+  }, []);
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newFilteredMessages = messages.filter((message) =>

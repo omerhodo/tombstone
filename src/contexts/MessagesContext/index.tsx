@@ -5,7 +5,7 @@ import {
   useState,
   ReactNode,
 } from 'react';
-import { getData } from '@/firebase';
+import { getLastSixMessages } from '@/firebase';
 
 interface Message {
   id: string;
@@ -44,7 +44,7 @@ export const MessagesProvider = ({ children }: MessagesProviderProps) => {
   const getMessages = async () => {
     try {
       setLoading(true);
-      const data = await getData('messages');
+      const data = await getLastSixMessages();
       setMessages(data);
     } catch (error) {
       console.error('Mesajlar getirilirken hata oluştu: ', error);
