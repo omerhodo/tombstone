@@ -8,7 +8,10 @@ const Footer = () => {
   return (
     <footer className="footer">
       <AuthForm />
-      <p className="footer__quote">{t('footerQuote')}</p>
+      <p
+        className="footer__quote"
+        dangerouslySetInnerHTML={{ __html: t('footerQuote') }}
+      ></p>
     </footer>
   );
 };
