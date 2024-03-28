@@ -40,6 +40,7 @@ const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
       notify(t('messageDeleted'));
       closeModal();
     } catch (error) {
+      notify(t('error'));
       console.error('Hata oluştu: ', error);
     }
   };
