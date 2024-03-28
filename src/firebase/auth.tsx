@@ -5,44 +5,40 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from 'firebase/auth';
-import { useTranslation } from 'react-i18next';
+import i18n from 'i18next';
 import { notify } from '@components/Toastify';
 
 const authUser = getAuth();
 
 const signUp = (email: string, password: string) => {
-  const { t } = useTranslation('general');
   return createUserWithEmailAndPassword(auth, email, password)
     .then(() => {
-      notify(t('registerSuccess'));
+      notify(i18n.t('registerSuccess'));
     })
     .catch((error) => {
-      notify(t('error'));
+      notify(i18n.t('error'));
       console.log(error.message);
     });
 };
 
 const signIn = (email: string, password: string) => {
-  const { t } = useTranslation('general');
   return signInWithEmailAndPassword(auth, email, password)
     .then(() => {
-      notify(t('loginSuccess'));
+      notify(i18n.t('loginSuccess'));
     })
     .catch((error) => {
-      notify(t('error'));
+      notify(i18n.t('error'));
       console.log(error.message);
     });
 };
 
 const signOutUser = () => {
-  const { t } = useTranslation('general');
-  const auth = getAuth();
   return signOut(auth)
     .then(() => {
-      notify(t('logoutSuccess'));
+      notify(i18n.t('logoutSuccess'));
     })
     .catch((error) => {
-      notify(t('error'));
+      notify(i18n.t('error'));
       console.log(error.message);
     });
 };
