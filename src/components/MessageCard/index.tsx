@@ -1,21 +1,62 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useAuth } from '@contexts/AuthContext';
 import Modal from '@components/Modal';
+import { getUserByEmail, removeData, approveData } from '@/firebase';
+import { notify } from '@components/Toastify';
 
 import '@styles/components/message-card.scss';
 import Tree from '@/assets/images/main/tree.svg';
 
 interface MessageCardProps {
+  id: string;
   name: string;
   content: string;
   date: string;
 }
 
-const MessageCard = ({ name, content, date }: MessageCardProps) => {
+const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
+  const { t } = useTranslation('general');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [role, setRole] = useState<string>('user');
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const title = `${name} tarafından gönderilen mesaj`;
+  const { currentUser } = useAuth() ?? { currentUser: null };
+
+  if (currentUser && currentUser.email) {
+    getUserByEmail(currentUser?.email).then((res) => {
+      if (res && res.length > 0) {
+        if (res[0].role === 'admin') {
+          setRole(res[0].role);
+        }
+      }
+    });
+  }
+
+  const handleApprove = async () => {
+    try {
+      await approveData(id, 'messages');
+      notify(t('messageApproved'));
+      closeModal();
+    } catch (error) {
+      notify(t('error'));
+      console.error('Hata oluştu: ', error);
+    }
+  };
+
+  const handleDelete = async () => {
+    try {
+      await removeData(id, 'messages');
+      notify(t('messageDeleted'));
+      closeModal();
+    } catch (error) {
+      notify(t('error'));
+      console.error('Hata oluştu: ', error);
+    }
+  };
+
+  const title = `${name} ${t('whoSender')}`;
 
   return (
     <>
@@ -35,6 +76,22 @@ const MessageCard = ({ name, content, date }: MessageCardProps) => {
       <Modal isOpen={isModalOpen} onClose={closeModal} title={title}>
         <div className="message-modal">
           <p className="message-modal__content">{content}</p>
+          {role === 'admin' && (
+            <p className="message-modal__footer">
+              <span
+                className="message-modal__button mr-10"
+                onClick={handleApprove}
+              >
+                {t('approve')}
+              </span>
+              <span
+                className="message-modal__button text-red"
+                onClick={handleDelete}
+              >
+                {t('remove')}
+              </span>
+            </p>
+          )}
         </div>
       </Modal>
     </>

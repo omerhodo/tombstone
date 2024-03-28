@@ -3,8 +3,13 @@ import MainImage from '@/components/MainImage';
 import NewMessage from '@components/NewMessage';
 import MessageContainer from '@containers/MessageContainer';
 import Button from '@components/Button';
+import useScrollToTop from '@hooks/useScrollToTop';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+  useScrollToTop();
+  const { t } = useTranslation('general');
+
   return (
     <>
       <MainImage />
@@ -12,7 +17,7 @@ const Home = () => {
       <MessageContainer />
       <div className="container mb-30 is-flex-center">
         <Link to="/all-messages">
-          <Button text="Tüm Mesajlar" />
+          <Button text={t('allMessages')} />
         </Link>
       </div>
     </>

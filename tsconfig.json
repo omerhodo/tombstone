@@ -10,10 +10,11 @@
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@layouts/*": ["./src/layouts/*"],
       "@containers/*": ["./src/containers/*"],
       "@contexts/*": ["./src/contexts/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@pages/*": ["./src/pages/*"],
       "@styles/*": ["./src/styles/*"]
     },
 

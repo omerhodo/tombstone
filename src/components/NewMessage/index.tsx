@@ -5,12 +5,14 @@ import Modal from '@components/Modal';
 import { useAuth } from '@contexts/AuthContext';
 import { notify } from '@components/Toastify';
 import { useMessages } from '@/contexts/MessagesContext';
+import { useTranslation } from 'react-i18next';
 
 import GoogleSignInButton from '@/components/GoogleSignInButton';
 
 import '@styles/components/new-message.scss';
 
 const NewMessage = () => {
+  const { t } = useTranslation('general');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [message, setMessage] = useState<string>('');
@@ -39,10 +41,12 @@ const NewMessage = () => {
         email: currentUser?.email,
         content: messageTrimmed,
         createdAt: new Date(),
+        role: 'user',
+        approved: false,
       });
       notify('Mesajınız başarıyla gönderildi');
     } catch (error) {
-      notify('Bir hata oluştu');
+      notify(t('error'));
       console.log(error);
     } finally {
       setIsLoading(false);
@@ -57,12 +61,12 @@ const NewMessage = () => {
     <>
       <Button
         className="container new-message__button"
-        text="Yeni Mesaj"
+        text={t('newMessage')}
         fontSize="18px"
         width="600px"
         onClick={openModal}
       />
-      <Modal isOpen={isModalOpen} onClose={closeModal} title="Yeni Mesaj">
+      <Modal isOpen={isModalOpen} onClose={closeModal} title={t('newMessage')}>
         <div className="new-message">
           {accessSend ? (
             <>
@@ -70,41 +74,39 @@ const NewMessage = () => {
                 <>
                   <label className="new-message__name">
                     <span className="new-message__name--info">
-                      Mesajınızda görünecek isim:
+                      {t('showingNameForMessage')}
                     </span>
                     {currentUser?.displayName}
                   </label>
                   <textarea
                     className="new-message__text-area"
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Mesajınızı Yazınız"
+                    placeholder={t('newMessagePlaceholder')}
                   />
                   <span className="new-message__warn-text">
-                    *Eklenen mesaj daha sonra düzenlenemez ve silinemez.
+                    {t('newMessageWarning')}
                   </span>
                   {isLoading ? (
                     <label className="new-message__loading">
-                      Mesajınız gönderiliyor...
+                      {t('messageSending')}
                     </label>
                   ) : (
                     <Button
                       onClick={handleSubmit}
-                      text="Mesajı Gönder"
+                      text={t('sendMessage')}
                     ></Button>
                   )}
                 </>
               ) : (
                 <div className="new-message__warning">
-                  <label className="mb-30">
-                    Mesaj yazmak için giriş yapınız
-                  </label>
+                  <label className="mb-30">{t('loginForMessage')}</label>
                   <GoogleSignInButton />
                 </div>
               )}
             </>
           ) : (
             <label className="new-message--access-denied">
-              Tek seferlik hakkınızı kullandınız.
+              {t('messageAccessDenied')}
             </label>
           )}
         </div>

@@ -1,4 +1,4 @@
-import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy, where } from 'firebase/firestore';
 import { db } from '@/firebase';
 
 const getData = async (type: string): Promise<any[]> => {
@@ -17,4 +17,24 @@ const getData = async (type: string): Promise<any[]> => {
   return data;
 };
 
-export { getData };
+async function getUserByEmail(userEmail: string) {
+  const usersRef = collection(db, 'users');
+  const q = query(usersRef, where('email', '==', userEmail));
+
+  try {
+    const querySnapshot = await getDocs(q);
+    const data: any[] = [];
+    querySnapshot.forEach((doc) => {
+      doc.data();
+      data.push({
+        id: doc.id,
+        ...doc.data(),
+      });
+    });
+    return data;
+  } catch (error) {
+    console.error('Error fetching user: ', error);
+  }
+}
+
+export { getData, getUserByEmail };

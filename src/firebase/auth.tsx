@@ -5,6 +5,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from 'firebase/auth';
+import i18n from 'i18next';
 import { notify } from '@components/Toastify';
 
 const authUser = getAuth();
@@ -12,10 +13,10 @@ const authUser = getAuth();
 const signUp = (email: string, password: string) => {
   return createUserWithEmailAndPassword(auth, email, password)
     .then(() => {
-      notify('Kayıt başarılı');
+      notify(i18n.t('Mezarlığa kayıt başarılı'));
     })
     .catch((error) => {
-      notify('Bir hata oluştu.');
+      notify(i18n.t('error'));
       console.log(error.message);
     });
 };
@@ -23,22 +24,21 @@ const signUp = (email: string, password: string) => {
 const signIn = (email: string, password: string) => {
   return signInWithEmailAndPassword(auth, email, password)
     .then(() => {
-      notify('Giriş başarılı');
+      notify(i18n.t('Mezarlığa giriş başarılı'));
     })
     .catch((error) => {
-      notify('Bir hata oluştu.');
+      notify(i18n.t('error'));
       console.log(error.message);
     });
 };
 
 const signOutUser = () => {
-  const auth = getAuth();
   return signOut(auth)
     .then(() => {
-      notify('Çıkış başarılı');
+      notify(i18n.t('Mezarlıktan ayrılma başarılı'));
     })
     .catch((error) => {
-      notify('Bir hata oluştu.');
+      notify(i18n.t('error'));
       console.log(error.message);
     });
 };

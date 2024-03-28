@@ -2,11 +2,15 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import { useMessages } from '@/contexts/MessagesContext';
+import { useTranslation } from 'react-i18next';
+import useScrollToTop from '@hooks/useScrollToTop';
 
 import MessageCard from '@components/MessageCard';
 import Button from '@/components/Button';
 
-const About = () => {
+const AllMessages = () => {
+  useScrollToTop();
+  const { t } = useTranslation('general');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [visibleMessages, setVisibleMessages] = useState<number>(10);
   const { messages } = useMessages();
@@ -27,11 +31,11 @@ const About = () => {
         <input
           className="all-messages__search--input"
           type="text"
-          placeholder="Mesajı yazan kişiyi arayın..."
+          placeholder={t('whoSentMessage')}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <Link to="/">
-          <Button text="Anasayfa" />
+          <Button text={t('mainpage')} />
         </Link>
       </div>
       <div className="all-messages__content">
@@ -39,6 +43,7 @@ const About = () => {
           filteredMessages.map((message, index) => (
             <MessageCard
               key={index}
+              id={message.id}
               name={message.userName}
               content={message.content}
               date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
@@ -46,10 +51,10 @@ const About = () => {
           ))}
       </div>
       {visibleMessages < filteredMessages.length && (
-        <button onClick={loadMore}>Load More</button>
+        <button onClick={loadMore}>{t('loadmore')}</button>
       )}
     </div>
   );
 };
 
-export default About;
+export default AllMessages;

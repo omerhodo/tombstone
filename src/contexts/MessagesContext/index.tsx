@@ -8,6 +8,7 @@ import {
 import { getData } from '@/firebase';
 
 interface Message {
+  id: string;
   userName: string;
   email: string;
   content: string;

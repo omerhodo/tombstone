@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
 import { useMessages } from '@contexts/MessagesContext';
+import { useTranslation } from 'react-i18next';
 
 import MessageCard from '@components/MessageCard';
 import Modal from '@components/Modal';
@@ -9,6 +10,7 @@ import Button from '@components/Button';
 import '@/styles/components/loadmore.scss';
 
 const LoadMore = () => {
+  const { t } = useTranslation('general');
   const { messages, loading } = useMessages();
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [visibleMessages, setVisibleMessages] = useState<number>(10);
@@ -29,11 +31,11 @@ const LoadMore = () => {
   return (
     <div className="container loadmore">
       <Button text="LoadMore" onClick={openModal} width="600px" />
-      <Modal isOpen={isModalOpen} onClose={closeModal} title="Tüm Mesajlar">
+      <Modal isOpen={isModalOpen} onClose={closeModal} title={t('allMessages')}>
         <input
           type="text"
           className="loadmore__search"
-          placeholder="Mesajı yazan kişiyi arayın..."
+          placeholder={t('whoSentMessage')}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         {loading && <p className="loadmore__not-found">Kişi bulunamadı.</p>}
@@ -42,6 +44,7 @@ const LoadMore = () => {
             filteredMessages.map((message, index) => (
               <MessageCard
                 key={index}
+                id={message.id}
                 name={message.userName}
                 content={message.content}
                 date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
@@ -49,7 +52,7 @@ const LoadMore = () => {
             ))}
         </div>
         {visibleMessages < messages.length && (
-          <button onClick={loadMore}>Load More</button>
+          <button onClick={loadMore}>{t('loadmore')}</button>
         )}
       </Modal>
     </div>
