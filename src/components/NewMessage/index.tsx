@@ -44,7 +44,7 @@ const NewMessage = () => {
         role: 'user',
         approved: false,
       });
-      notify('Mesajınız başarıyla gönderildi');
+      notify(t('messageSent'));
     } catch (error) {
       notify(t('error'));
       console.log(error);

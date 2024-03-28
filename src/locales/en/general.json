@@ -24,6 +24,7 @@
   "newMessagePlaceholder": "Write your message...",
   "newMessageWarning": "*The added message cannot be edited or deleted later.",
   "messageSending": "Your message is being sent...",
+  "messageSent": "Your message has been sent",
   "sendMessage": "Send Message",
   "loginForMessage": "Please log in to send a message",
   "messageAccessDenied": "You have used your one-time right",
@@ -37,5 +38,6 @@
   "messageDeleted": "Message deleted",
   "messageApproved": "Message approved",
   "manifest": "Manifest",
-  "returnMainpage": "Return to mainpage"
+  "returnMainpage": "Return to mainpage",
+  "welcomeSite": "Welcome to the site"
 }

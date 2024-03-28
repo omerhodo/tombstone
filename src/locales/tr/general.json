@@ -17,13 +17,14 @@
   "logout": "Mezarlıktan ayrıl",
   "logoutOkay": "Mezarlıktan ayrılma başarılı",
   "register": "Mezarlığa kayıt ol",
-  "registerSuccess": "Kayıt başarılı",
+  "registerSuccess": "Mezarlığa kayıt başarılı",
   "loadmore": "Daha fazla...",
   "whoSender": "tarafından gönderilen dilek",
   "newMessage": "Yeni dilek",
   "newMessagePlaceholder": "Dileğinizi yazın...",
   "newMessageWarning": "*Eklenen dilek daha sonra düzenlenemez ve silinemez.",
   "messageSending": "Dileğiniz gönderiliyor...",
+  "messageSent": "Dileğiniz gönderildi",
   "sendMessage": "Dilek gönder",
   "loginForMessage": "Dilek yazmak için giriş yapınız",
   "messageAccessDenied": "Tek seferlik dilek hakkınızı kullandınız",
@@ -37,5 +38,6 @@
   "messageDeleted": "Dilek silindi",
   "messageApproved": "Dilek onaylandı",
   "manifest": "Manifesto",
-  "returnMainpage": "Mezarlığa dön"
+  "returnMainpage": "Mezarlığa dön",
+  "welcomeSite": "Mezarlığa hoş geldiniz"
 }
