@@ -31,7 +31,7 @@ const AllMessages = () => {
         <input
           className="all-messages__search--input"
           type="text"
-          placeholder="Mesajı yazan kişiyi arayın..."
+          placeholder={t('whoSentMessage')}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <Link to="/">

@@ -31,11 +31,11 @@ const LoadMore = () => {
   return (
     <div className="container loadmore">
       <Button text="LoadMore" onClick={openModal} width="600px" />
-      <Modal isOpen={isModalOpen} onClose={closeModal} title="Tüm Mesajlar">
+      <Modal isOpen={isModalOpen} onClose={closeModal} title={t('allMessages')}>
         <input
           type="text"
           className="loadmore__search"
-          placeholder="Mesajı yazan kişiyi arayın..."
+          placeholder={t('whoSentMessage')}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         {loading && <p className="loadmore__not-found">Kişi bulunamadı.</p>}
