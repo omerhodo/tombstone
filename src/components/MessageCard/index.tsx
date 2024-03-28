@@ -69,7 +69,10 @@ const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
               <span className="message-modal__button mr-10">
                 {t('approve')}
               </span>
-              <span className="message-modal__button" onClick={handleDelete}>
+              <span
+                className="message-modal__button text-red"
+                onClick={handleDelete}
+              >
                 {t('remove')}
               </span>
             </p>

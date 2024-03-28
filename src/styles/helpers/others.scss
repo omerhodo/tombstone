@@ -1,6 +1,6 @@
 @import '@styles/utilities/_utilities.scss';
 
-.border-gold {
+.border-primary {
   border: 1px solid $primary;
 }
 
@@ -21,5 +21,9 @@
 }
 
 .is-cursor-pointer {
-  cursor: pointer;
+  cursor: pointer !important;
+}
+
+.text-red {
+  color: $red !important;
 }
