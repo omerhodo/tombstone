@@ -1,5 +1,6 @@
 import { signIn, signUp, signOutUser, authUser } from './auth';
 import { sendData } from './sendData';
+import { removeData } from './removeData';
 import { getData, getUserByEmail } from './getData';
 import { auth, db } from './firebase-config';
 
@@ -13,4 +14,5 @@ export {
   sendData,
   getData,
   getUserByEmail,
+  removeData,
 };

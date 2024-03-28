@@ -2,18 +2,20 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@contexts/AuthContext';
 import Modal from '@components/Modal';
-import { getUserByEmail } from '@/firebase';
+import { getUserByEmail, removeData } from '@/firebase';
+import { notify } from '@components/Toastify';
 
 import '@styles/components/message-card.scss';
 import Tree from '@/assets/images/main/tree.svg';
 
 interface MessageCardProps {
+  id: string;
   name: string;
   content: string;
   date: string;
 }
 
-const MessageCard = ({ name, content, date }: MessageCardProps) => {
+const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
   const { t } = useTranslation('general');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [role, setRole] = useState<string>('user');
@@ -31,6 +33,16 @@ const MessageCard = ({ name, content, date }: MessageCardProps) => {
       }
     });
   }
+
+  const handleDelete = async () => {
+    try {
+      await removeData(id, 'messages');
+      notify(t('messageDeleted'));
+      closeModal();
+    } catch (error) {
+      console.error('Hata oluştu: ', error);
+    }
+  };
 
   const title = `${name} ${t('whoSender')}`;
 
@@ -57,7 +69,9 @@ const MessageCard = ({ name, content, date }: MessageCardProps) => {
               <span className="message-modal__button mr-10">
                 {t('approve')}
               </span>
-              <span className="message-modal__button">{t('remove')}</span>
+              <span className="message-modal__button" onClick={handleDelete}>
+                {t('remove')}
+              </span>
             </p>
           )}
         </div>

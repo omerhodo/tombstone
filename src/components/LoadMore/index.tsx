@@ -44,6 +44,7 @@ const LoadMore = () => {
             filteredMessages.map((message, index) => (
               <MessageCard
                 key={index}
+                id={message.id}
                 name={message.userName}
                 content={message.content}
                 date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
