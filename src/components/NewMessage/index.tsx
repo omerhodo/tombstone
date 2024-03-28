@@ -59,12 +59,12 @@ const NewMessage = () => {
     <>
       <Button
         className="container new-message__button"
-        text="Yeni Mesaj"
+        text={t('newMessage')}
         fontSize="18px"
         width="600px"
         onClick={openModal}
       />
-      <Modal isOpen={isModalOpen} onClose={closeModal} title="Yeni Mesaj">
+      <Modal isOpen={isModalOpen} onClose={closeModal} title={t('newMessage')}>
         <div className="new-message">
           {accessSend ? (
             <>
