@@ -55,6 +55,7 @@
   }
 
   &__return {
+    min-width: 150px;
     @include to-tablet {
       width: -webkit-fill-available;
     } 
