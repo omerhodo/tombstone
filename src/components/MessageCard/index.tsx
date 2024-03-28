@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAuth } from '@contexts/AuthContext';
 import Modal from '@components/Modal';
+import { getUserByEmail } from '@/firebase';
 
 import '@styles/components/message-card.scss';
 import Tree from '@/assets/images/main/tree.svg';
@@ -14,8 +16,21 @@ interface MessageCardProps {
 const MessageCard = ({ name, content, date }: MessageCardProps) => {
   const { t } = useTranslation('general');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [role, setRole] = useState<string>('user');
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const { currentUser } = useAuth() ?? { currentUser: null };
+
+  if (currentUser && currentUser.email) {
+    getUserByEmail(currentUser?.email).then((res) => {
+      if (res && res.length > 0) {
+        if (res[0].role === 'admin') {
+          setRole(res[0].role);
+        }
+      }
+    });
+  }
 
   const title = `${name} ${t('whoSender')}`;
 
@@ -37,10 +52,14 @@ const MessageCard = ({ name, content, date }: MessageCardProps) => {
       <Modal isOpen={isModalOpen} onClose={closeModal} title={title}>
         <div className="message-modal">
           <p className="message-modal__content">{content}</p>
-          <p className="message-modal__footer">
-            <span className="message-modal__button mr-10">{t('approve')}</span>
-            <span className="message-modal__button">{t('remove')}</span>
-          </p>
+          {role === 'admin' && (
+            <p className="message-modal__footer">
+              <span className="message-modal__button mr-10">
+                {t('approve')}
+              </span>
+              <span className="message-modal__button">{t('remove')}</span>
+            </p>
+          )}
         </div>
       </Modal>
     </>
