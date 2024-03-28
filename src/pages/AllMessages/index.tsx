@@ -11,7 +11,7 @@ import Button from '@/components/Button';
 const AllMessages = () => {
   useScrollToTop();
   const { t } = useTranslation('general');
-  const [visibleMessages, setVisibleMessages] = useState<number>(10);
+  const [visibleMessages, setVisibleMessages] = useState<number>(9);
   const { messages } = useMessages();
   const [filteredMessages, setFilteredMessages] = useState(messages); // Add a state for filtered messages
 
