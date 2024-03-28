@@ -9,9 +9,9 @@ import { useTranslation } from 'react-i18next';
 import { notify } from '@components/Toastify';
 
 const authUser = getAuth();
-const { t } = useTranslation('general');
 
 const signUp = (email: string, password: string) => {
+  const { t } = useTranslation('general');
   return createUserWithEmailAndPassword(auth, email, password)
     .then(() => {
       notify(t('registerSuccess'));
@@ -23,6 +23,7 @@ const signUp = (email: string, password: string) => {
 };
 
 const signIn = (email: string, password: string) => {
+  const { t } = useTranslation('general');
   return signInWithEmailAndPassword(auth, email, password)
     .then(() => {
       notify(t('loginSuccess'));
@@ -34,6 +35,7 @@ const signIn = (email: string, password: string) => {
 };
 
 const signOutUser = () => {
+  const { t } = useTranslation('general');
   const auth = getAuth();
   return signOut(auth)
     .then(() => {
