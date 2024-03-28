@@ -41,6 +41,8 @@ const NewMessage = () => {
         email: currentUser?.email,
         content: messageTrimmed,
         createdAt: new Date(),
+        role: 'user',
+        approved: false,
       });
       notify('Mesajınız başarıyla gönderildi');
     } catch (error) {

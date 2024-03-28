@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@contexts/AuthContext';
 import Modal from '@components/Modal';
-import { getUserByEmail, removeData } from '@/firebase';
+import { getUserByEmail, removeData, approveData } from '@/firebase';
 import { notify } from '@components/Toastify';
 
 import '@styles/components/message-card.scss';
@@ -33,6 +33,17 @@ const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
       }
     });
   }
+
+  const handleApprove = async () => {
+    try {
+      await approveData(id, 'messages');
+      notify(t('messageApproved'));
+      closeModal();
+    } catch (error) {
+      notify(t('error'));
+      console.error('Hata oluştu: ', error);
+    }
+  };
 
   const handleDelete = async () => {
     try {
@@ -67,7 +78,10 @@ const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
           <p className="message-modal__content">{content}</p>
           {role === 'admin' && (
             <p className="message-modal__footer">
-              <span className="message-modal__button mr-10">
+              <span
+                className="message-modal__button mr-10"
+                onClick={handleApprove}
+              >
                 {t('approve')}
               </span>
               <span

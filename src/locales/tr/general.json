@@ -34,5 +34,6 @@
   "aboutFirst": "Burada yazılan yazıları benim okuduğumdan emin olamayız.",
   "aboutSecond": "Sizden isteğim buraya uğrarsanız, eğer canınız isterse benimle ilgili iyi, komik, kötü ya da sıradan anılarınızı, düşüncelerinizi paylaşmanız. Böylece bu sanal tombstone nadide bir koleksiyona ya da bir soluk bir mezar taşına dönüsün.",
   "footerQuote": "İklim için cennete, insanları için cehenneme gidilir. -Mark Twain",
-  "messageDeleted": "Dilek silindi"
+  "messageDeleted": "Dilek silindi",
+  "messageApproved": "Dilek onaylandı"
 }
