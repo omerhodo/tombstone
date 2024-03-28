@@ -13,7 +13,7 @@
   "login": "Log in",
   "loginSuccess": "Login successful",
   "logout": "Log out",
-  "logoutSuccess": "Logout successful",
+  "logoutOkay": "Logout successful",
   "register": "Register",
   "registerSuccess": "Registration successful",
   "loadmore": "Load more",

@@ -13,7 +13,7 @@ const authUser = getAuth();
 const signUp = (email: string, password: string) => {
   return createUserWithEmailAndPassword(auth, email, password)
     .then(() => {
-      notify(i18n.t('registerSuccess'));
+      notify(i18n.t('Mezarlığa kayıt başarılı'));
     })
     .catch((error) => {
       notify(i18n.t('error'));
@@ -24,7 +24,7 @@ const signUp = (email: string, password: string) => {
 const signIn = (email: string, password: string) => {
   return signInWithEmailAndPassword(auth, email, password)
     .then(() => {
-      notify(i18n.t('loginSuccess'));
+      notify(i18n.t('Mezarlığa giriş başarılı'));
     })
     .catch((error) => {
       notify(i18n.t('error'));
@@ -35,7 +35,7 @@ const signIn = (email: string, password: string) => {
 const signOutUser = () => {
   return signOut(auth)
     .then(() => {
-      notify(i18n.t('logoutSuccess'));
+      notify(i18n.t('Mezarlıktan ayrılma başarılı'));
     })
     .catch((error) => {
       notify(i18n.t('error'));

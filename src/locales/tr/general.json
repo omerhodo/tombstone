@@ -13,7 +13,7 @@
   "login": "Mezarlığa giriş yap",
   "loginSuccess": "Mezarlığa giriş başarılı",
   "logout": "Mezarlıktan ayrıl",
-  "logoutSuccess": "Mezarlıktan ayrılma başarılı",
+  "logoutOkay": "Mezarlıktan ayrılma başarılı",
   "register": "Mezarlığa kayıt ol",
   "registerSuccess": "Kayıt başarılı",
   "loadmore": "Daha fazla...",
