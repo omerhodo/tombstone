@@ -13,6 +13,8 @@
   "logout": "Log out",
   "register": "Register",
   "loadmore": "Load more",
+  "whoSender": "by message sent",
+  "newMessage": "New Message",
   "newMessagePlaceholder": "Write your message...",
   "newMessageWarning": "*The added message cannot be edited or deleted later.",
   "messageSending": "Your message is being sent...",

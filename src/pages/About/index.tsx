@@ -11,11 +11,8 @@ const About = () => {
   return (
     <div className="about container">
       <h1 className="about--title">{t('aboutTitle')}</h1>
-      <p className="about--description">
-        {t('aboutFirst')}
-        <br />
-        {t('aboutSecond')}
-      </p>
+      <p className="about--description mb-15">{t('aboutFirst')}</p>
+      <p className="about--description">{t('aboutSecond')}</p>
       <Link to="/" className="about--return">
         <Button text={t('mainpage')} />
       </Link>

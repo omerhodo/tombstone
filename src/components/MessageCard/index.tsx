@@ -17,7 +17,7 @@ const MessageCard = ({ name, content, date }: MessageCardProps) => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const title = `${name} ${t('who_sender')}`;
+  const title = `${name} ${t('whoSender')}`;
 
   return (
     <>
