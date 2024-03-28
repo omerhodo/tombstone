@@ -44,7 +44,7 @@ const NewMessage = () => {
       });
       notify('Mesajınız başarıyla gönderildi');
     } catch (error) {
-      notify('Bir hata oluştu');
+      notify(t('error'));
       console.log(error);
     } finally {
       setIsLoading(false);

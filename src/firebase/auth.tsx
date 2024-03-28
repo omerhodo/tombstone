@@ -5,17 +5,19 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from 'firebase/auth';
+import { useTranslation } from 'react-i18next';
 import { notify } from '@components/Toastify';
 
 const authUser = getAuth();
+const { t } = useTranslation('general');
 
 const signUp = (email: string, password: string) => {
   return createUserWithEmailAndPassword(auth, email, password)
     .then(() => {
-      notify('Kayıt başarılı');
+      notify(t('registerSuccess'));
     })
     .catch((error) => {
-      notify('Bir hata oluştu.');
+      notify(t('error'));
       console.log(error.message);
     });
 };
@@ -23,10 +25,10 @@ const signUp = (email: string, password: string) => {
 const signIn = (email: string, password: string) => {
   return signInWithEmailAndPassword(auth, email, password)
     .then(() => {
-      notify('Giriş başarılı');
+      notify(t('loginSuccess'));
     })
     .catch((error) => {
-      notify('Bir hata oluştu.');
+      notify(t('error'));
       console.log(error.message);
     });
 };
@@ -35,10 +37,10 @@ const signOutUser = () => {
   const auth = getAuth();
   return signOut(auth)
     .then(() => {
-      notify('Çıkış başarılı');
+      notify(t('logoutSuccess'));
     })
     .catch((error) => {
-      notify('Bir hata oluştu.');
+      notify(t('error'));
       console.log(error.message);
     });
 };
