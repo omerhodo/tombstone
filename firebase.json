@@ -5,7 +5,7 @@
   },
   "hosting": [
     {
-      "site": "hodo",
+      "site": "tombstonetest",
       "public": "dist",
       "ignore": [
         "firebase.json",

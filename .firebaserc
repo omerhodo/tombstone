@@ -2,16 +2,16 @@
   "projects": {
     "default": "tombstone-hodo",
     "production": "tombstone-hodo",
-    "staging": "tombstone-8642c"
+    "staging": "tombstone-test"
   },
   "targets": {
-    "my-default-project-id": {
+    "tombstone-test": {
       "hosting": {
         "prod": [
           "tombstone-hodo"
         ],
         "staging": [
-          "tombstone-8642c"
+          "tombstone-test"
         ]
       }
     }

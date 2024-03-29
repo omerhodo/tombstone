@@ -34,6 +34,7 @@ const ManifestModal = () => {
       <h1 className="is-flex-center fs-28 mb-30">{t('manifestTitle')}</h1>
       <p className="manifest--description mb-15">{t('manifestFirst')}</p>
       <p className="manifest--description">{t('manifestSecond')}</p>
+      <p className="manifest--description">{t('manifestThird')}</p>
     </Modal>
   );
 };

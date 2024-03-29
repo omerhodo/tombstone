@@ -13,6 +13,7 @@ const Manifest = () => {
       <h1 className="manifest--title">{t('manifestTitle')}</h1>
       <p className="manifest--description mb-15">{t('manifestFirst')}</p>
       <p className="manifest--description">{t('manifestSecond')}</p>
+      <p className="manifest--description">{t('manifestThird')}</p>
       <Link to="/" className="manifest--return">
         <Button text={t('mainpage')} />
       </Link>
