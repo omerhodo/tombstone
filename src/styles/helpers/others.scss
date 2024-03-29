@@ -27,3 +27,7 @@
 .text-red {
   color: $red !important;
 }
+
+.bg-gradient {
+  background-image: -webkit-linear-gradient(17.17deg, #4285f4 11.63%, #d96570 40.43%, #d96570 68.07%);
+}
