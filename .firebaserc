@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "tombstone-hodo",
+    "default": "tombstone-test",
     "production": "tombstone-hodo",
     "staging": "tombstone-test"
   },
