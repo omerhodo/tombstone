@@ -1,17 +1,17 @@
 {
   "projects": {
     "default": "tombstone-test",
-    "production": "tombstone-hodo",
-    "staging": "tombstone-test"
+    "staging": "tombstone-test",
+    "production": "tombstone-hodo"
   },
   "targets": {
     "tombstone-test": {
       "hosting": {
-        "prod": [
-          "tombstone-hodo"
-        ],
         "staging": [
           "tombstone-test"
+        ],
+        "prod": [
+          "tombstone-hodo"
         ]
       }
     }
