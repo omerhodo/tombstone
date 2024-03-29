@@ -48,11 +48,12 @@
   }
   
   &__close {
-    background-color: transparent;
-    border: none;
     cursor: pointer;
-    font-size: 20px;
-    color: $primary-light;
+
+    &--icon {
+      width: 30px;
+      height: 30px;
+    }
   }
   
   &__body {

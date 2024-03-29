@@ -1,5 +1,19 @@
 {
   "projects": {
-    "default": "tombstone-8642c"
+    "default": "tombstone-test",
+    "staging": "tombstone-test",
+    "production": "tombstone-hodo"
+  },
+  "targets": {
+    "tombstone-test": {
+      "hosting": {
+        "staging": [
+          "tombstone-test"
+        ],
+        "prod": [
+          "tombstone-hodo"
+        ]
+      }
+    }
   }
 }

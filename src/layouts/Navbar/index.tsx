@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/about">
+      <Link to="/manifest">
         <img src={Logo} className="navbar--logo" alt="Logo" />
       </Link>
       <div className="navbar__title">
@@ -17,7 +17,7 @@ const Navbar = () => {
           {t('title')}
         </Link>
       </div>
-      <Link to="/about">
+      <Link to="/manifest">
         <img src={Logo} className="navbar--logo" alt="Logo" />
       </Link>
     </nav>

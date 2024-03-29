@@ -14,9 +14,11 @@ const signUp = (email: string, password: string) => {
   return createUserWithEmailAndPassword(auth, email, password)
     .then(() => {
       notify(i18n.t('Mezarlığa kayıt başarılı'));
+      // notify(i18n.t('registerSuccess'));
     })
     .catch((error) => {
-      notify(i18n.t('error'));
+      notify(i18n.t('Hatayla karşılaşıldı'));
+      // notify(i18n.t('error'));
       console.log(error.message);
     });
 };
@@ -25,9 +27,11 @@ const signIn = (email: string, password: string) => {
   return signInWithEmailAndPassword(auth, email, password)
     .then(() => {
       notify(i18n.t('Mezarlığa giriş başarılı'));
+      // notify(i18n.t('loginSuccess'));
     })
     .catch((error) => {
-      notify(i18n.t('error'));
+      notify(i18n.t('Hatayla karşılaşıldı'));
+      // notify(i18n.t('error'));
       console.log(error.message);
     });
 };
@@ -36,9 +40,11 @@ const signOutUser = () => {
   return signOut(auth)
     .then(() => {
       notify(i18n.t('Mezarlıktan ayrılma başarılı'));
+      // notify(i18n.t('logoutOkay'));
     })
     .catch((error) => {
-      notify(i18n.t('error'));
+      notify(i18n.t('Hatayla karşılaşıldı'));
+      // notify(i18n.t('error'));
       console.log(error.message);
     });
 };

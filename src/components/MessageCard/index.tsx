@@ -34,6 +34,7 @@ const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
     });
   }
 
+  const approveButton = false;
   const handleApprove = async () => {
     try {
       await approveData(id, 'messages');
@@ -78,12 +79,14 @@ const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
           <p className="message-modal__content">{content}</p>
           {role === 'admin' && (
             <p className="message-modal__footer">
-              <span
-                className="message-modal__button mr-10"
-                onClick={handleApprove}
-              >
-                {t('approve')}
-              </span>
+              {approveButton && (
+                <span
+                  className="message-modal__button mr-10"
+                  onClick={handleApprove}
+                >
+                  {t('approve')}
+                </span>
+              )}
               <span
                 className="message-modal__button text-red"
                 onClick={handleDelete}

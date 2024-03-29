@@ -11,23 +11,35 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 50px;
     margin-bottom: 30px !important;
+    width: -webkit-fill-available;
   }
 
   &__search {
     display: flex;
+    max-width: 700px;
     justify-content: center;
     align-items: center;
     font-size: 16px;
     margin-bottom: 40px;
     width: -webkit-fill-available;
 
+    @include to-tablet {
+      flex-direction: column;
+    }
+
     &--input {
-      width: 500px;
+      width: -webkit-fill-available;
       margin-right: 15px;
       padding: 10px;
       border: 2px solid $primary;
       border-radius: 10px;
       outline: none;
+      font-size: 16px;
+
+      @include to-tablet {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
   
       &::placeholder {
         color: $primary;
@@ -36,6 +48,19 @@
       &:hover {
         border-color: $primary-dark;
       }
+    }
+  }
+
+  &__return {
+    min-width: 150px;
+    @include to-tablet {
+      width: -webkit-fill-available;
+    } 
+
+    &--full {
+      @include to-tablet {
+        width: -webkit-fill-available;
+      } 
     }
   }
 }

@@ -1,4 +1,11 @@
-import { collection, getDocs, query, orderBy, where } from 'firebase/firestore';
+import {
+  collection,
+  getDocs,
+  query,
+  orderBy,
+  where,
+  limit,
+} from 'firebase/firestore';
 import { db } from '@/firebase';
 
 const getData = async (type: string): Promise<any[]> => {
@@ -37,4 +44,19 @@ async function getUserByEmail(userEmail: string) {
   }
 }
 
-export { getData, getUserByEmail };
+const getLastSixMessages = async (): Promise<any[]> => {
+  const messagesCol = collection(db, 'messages');
+  const q = query(messagesCol, orderBy('createdAt', 'desc'), limit(6));
+
+  const querySnapshot = await getDocs(q);
+  const messages: any[] = [];
+  querySnapshot.forEach((doc) => {
+    messages.push({
+      id: doc.id,
+      ...doc.data(),
+    });
+  });
+  return messages;
+};
+
+export { getData, getUserByEmail, getLastSixMessages };

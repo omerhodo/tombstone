@@ -3,6 +3,7 @@ import { auth, db } from '@/firebase';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { notify } from '@components/Toastify';
+import { useTranslation } from 'react-i18next';
 
 import GoogleSvg from '@/assets/images/svg/google.svg';
 
@@ -14,6 +15,7 @@ interface UserInfo {
 }
 
 const GoogleSignInButton = () => {
+  const { t } = useTranslation('general');
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const GoogleSignInButton = () => {
         const userRef = doc(db, 'users', userInfo.email);
         try {
           const userSnap = await getDoc(userRef);
-          notify('Giriş başarılı');
+          notify(t('welcomeSite'));
           if (!userSnap.exists()) {
             await setDoc(userRef, userInfo);
           }

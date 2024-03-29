@@ -5,7 +5,7 @@ import { AuthProvider } from '@contexts/AuthContext';
 import { MessagesProvider } from '@contexts/MessagesContext';
 import MainLayout from '@layouts/MainLayout';
 import Home from '@pages/Home';
-import About from '@pages/About';
+import Manifest from '@/pages/Manifest';
 import AllMessages from '@pages/AllMessages';
 import { ToastContainer } from '@components/Toastify';
 
@@ -24,8 +24,8 @@ function App() {
               element={<MainLayout children={<AllMessages />} />}
             />
             <Route
-              path="/about"
-              element={<MainLayout children={<About />} />}
+              path="/manifest"
+              element={<MainLayout children={<Manifest />} />}
             />
           </Routes>
         </Router>
