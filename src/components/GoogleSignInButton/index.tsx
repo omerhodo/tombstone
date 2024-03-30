@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { auth, db } from '@/firebase';
-import { GoogleAuthProvider, signInWithRedirect } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { notify } from '@components/Toastify';
 import { useTranslation } from 'react-i18next';
@@ -53,7 +53,7 @@ const GoogleSignInButton = () => {
 
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider();
-    signInWithRedirect(auth, provider)
+    signInWithPopup(auth, provider)
       .then((result) => {
         createUser(result.user);
       })
