@@ -22,7 +22,7 @@
   "whoSender": "tarafından gönderilen dilek",
   "newMessage": "Yeni dilek",
   "newMessagePlaceholder": "Dileğinizi yazın...",
-  "newMessageWarning": "*Eklenen dilek daha sonra düzenlenemez ve silinemez.",
+  "newMessageWarning": "*Eklenen dilek daha sonra düzenlenemez ve silinemez. Mesajınız sitede açık olarak yayınlanacaktır. Sadece uğradığınızı belirtmek için boş mesajda gönderebilirsiniz.",
   "messageSending": "Dileğiniz gönderiliyor...",
   "messageSent": "Dileğiniz gönderildi",
   "sendMessage": "Dilek gönder",

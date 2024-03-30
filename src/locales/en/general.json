@@ -22,7 +22,7 @@
   "whoSender": "by message sent",
   "newMessage": "New Message",
   "newMessagePlaceholder": "Write your message...",
-  "newMessageWarning": "*The added message cannot be edited or deleted later.",
+  "newMessageWarning": "*The added wish cannot be edited or deleted later. Your message will be published publicly on the site. You can send a blank message just to indicate your information.",
   "messageSending": "Your message is being sent...",
   "messageSent": "Your message has been sent",
   "sendMessage": "Send Message",
