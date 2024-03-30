@@ -22,6 +22,7 @@ interface MessagesContextType {
   loading: boolean;
   setMessages?: React.Dispatch<React.SetStateAction<Message[]>>;
   setLoading?: React.Dispatch<React.SetStateAction<boolean>>;
+  getMessages?: () => Promise<void>;
 }
 
 interface MessagesProviderProps {
@@ -58,7 +59,7 @@ export const MessagesProvider = ({ children }: MessagesProviderProps) => {
   }, []);
 
   return (
-    <MessagesContext.Provider value={{ messages, loading }}>
+    <MessagesContext.Provider value={{ messages, loading, getMessages }}>
       {!loading && children}
     </MessagesContext.Provider>
   );

@@ -20,7 +20,7 @@ const NewMessage = () => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const { messages } = useMessages();
+  const { messages, getMessages } = useMessages();
 
   const { currentUser } = useAuth() ?? { currentUser: null };
 
@@ -45,6 +45,7 @@ const NewMessage = () => {
         approved: false,
       });
       notify(t('messageSent'));
+      await getMessages?.();
     } catch (error) {
       notify(t('error'));
       console.log(error);
