@@ -40,5 +40,6 @@
   "messageApproved": "Dilek onaylandı",
   "manifest": "Manifesto",
   "returnMainpage": "Mezarlığa dön",
-  "welcomeSite": "Mezarlığa hoş geldiniz"
+  "welcomeSite": "Mezarlığa hoş geldiniz",
+  "orderTypeError": "Order parametresi 'asc' veya 'desc' olmalıdır."
 }

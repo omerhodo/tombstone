@@ -16,7 +16,7 @@ const AllMessages = () => {
   const [messages, setMessages] = useState<any[]>([]);
 
   useEffect(() => {
-    getData('messages').then((data) => {
+    getData('messages', 'asc').then((data) => {
       setMessages(data);
       setFilteredMessages(data);
     });
