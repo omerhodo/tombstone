@@ -10,7 +10,7 @@ import { db } from '@/firebase';
 
 const getData = async (type: string): Promise<any[]> => {
   const dataCol = collection(db, type);
-  const q = query(dataCol, orderBy('createdAt', 'desc'));
+  const q = query(dataCol, orderBy('createdAt', 'asc'));
 
   const querySnapshot = await getDocs(q);
   const data: any[] = [];
