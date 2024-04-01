@@ -4,17 +4,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  &__image {
-    display: block;
-    width: 700px;
-    max-width: 90vw;
+  overflow: hidden;
+
+  &--image {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: cover;
     border: 2px solid $primary;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 30px;
 
     @include to-tablet {
-      margin-bottom: 30px;
+      max-width: 90vw;
+      margin-bottom: 20px;
     }
   }
 }
