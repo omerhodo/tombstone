@@ -5,11 +5,15 @@
     "production": "tombstone-hodo"
   },
   "targets": {
-    "tombstone-hodo": {
+    "tombstone-test": {
       "hosting": {
         "staging": [
           "tombstone-test"
-        ],
+        ]
+      }
+    },
+    "tombstone-hodo": {
+      "hosting": {
         "prod": [
           "tombstone-hodo"
         ]
