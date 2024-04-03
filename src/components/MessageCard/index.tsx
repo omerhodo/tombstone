@@ -11,11 +11,12 @@ import Tree from '@/assets/images/main/tree.svg';
 interface MessageCardProps {
   id: string;
   name: string;
+  email: string;
   content: string;
   date: string;
 }
 
-const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
+const MessageCard = ({ id, name, email, content, date }: MessageCardProps) => {
   const { t } = useTranslation('general');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [role, setRole] = useState<string>('user');
@@ -27,7 +28,7 @@ const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
   if (currentUser && currentUser.email) {
     getUserByEmail(currentUser?.email).then((res) => {
       if (res && res.length > 0) {
-        if (res[0].role === 'admin') {
+        if (res[0].role) {
           setRole(res[0].role);
         }
       }
@@ -54,6 +55,21 @@ const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
     } catch (error) {
       notify(t('error'));
       console.error('Hata oluştu: ', error);
+    }
+  };
+
+  const handleDeleteForEditor = async () => {
+    if (currentUser?.email !== email) {
+      try {
+        await removeData(id, 'messages');
+        notify(t('messageDeleted'));
+        closeModal();
+      } catch (error) {
+        notify(t('error'));
+        console.error('Hata oluştu: ', error);
+      }
+    } else {
+      notify(t('cantDeleteOwnMessage'));
     }
   };
 
@@ -90,6 +106,16 @@ const MessageCard = ({ id, name, content, date }: MessageCardProps) => {
               <span
                 className="message-modal__button text-red"
                 onClick={handleDelete}
+              >
+                {t('remove')}
+              </span>
+            </p>
+          )}
+          {role === 'editor' && (
+            <p className="message-modal__footer">
+              <span
+                className="message-modal__button text-red"
+                onClick={handleDeleteForEditor}
               >
                 {t('remove')}
               </span>

@@ -41,5 +41,6 @@
   "manifest": "Manifest",
   "returnMainpage": "Return to mainpage",
   "welcomeSite": "Welcome to the site",
-  "orderTypeError": "The order parameter must be 'asc' or 'desc'."
+  "orderTypeError": "The order parameter must be 'asc' or 'desc'.",
+  "cantDeleteOwnMessage": "You cannot delete your own message"
 }

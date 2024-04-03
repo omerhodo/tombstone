@@ -41,5 +41,6 @@
   "manifest": "Manifesto",
   "returnMainpage": "Mezarlığa dön",
   "welcomeSite": "Mezarlığa hoş geldiniz",
-  "orderTypeError": "Order parametresi 'asc' veya 'desc' olmalıdır."
+  "orderTypeError": "Order parametresi 'asc' veya 'desc' olmalıdır.",
+  "cantDeleteOwnMessage": "Kendi dileğinizi silemezsiniz"
 }

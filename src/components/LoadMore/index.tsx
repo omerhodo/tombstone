@@ -46,6 +46,7 @@ const LoadMore = () => {
                 key={index}
                 id={message.id}
                 name={message.userName}
+                email={message.email}
                 content={message.content}
                 date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
               />
