@@ -7,10 +7,15 @@ import {
   limit,
 } from 'firebase/firestore';
 import { db } from '@/firebase';
+import i18n from 'i18next';
 
-const getData = async (type: string): Promise<any[]> => {
+const getData = async (type: string, order: string): Promise<any[]> => {
+  if (order !== 'asc' && order !== 'desc') {
+    throw new Error(i18n.t('order parameter must be asc or desc'));
+  }
+
   const dataCol = collection(db, type);
-  const q = query(dataCol, orderBy('createdAt', 'desc'));
+  const q = query(dataCol, orderBy('createdAt', order));
 
   const querySnapshot = await getDocs(q);
   const data: any[] = [];

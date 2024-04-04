@@ -22,7 +22,7 @@
   "whoSender": "by message sent",
   "newMessage": "New Message",
   "newMessagePlaceholder": "Write your message...",
-  "newMessageWarning": "*The added message cannot be edited or deleted later.",
+  "newMessageWarning": "*The added wish cannot be edited or deleted later. Your message will be published publicly on the site. You can send a blank message just to indicate your information.",
   "messageSending": "Your message is being sent...",
   "messageSent": "Your message has been sent",
   "sendMessage": "Send Message",
@@ -33,12 +33,14 @@
   "whoSentMessage": "Search the person who sent the wish...",
   "manifestTitle": "Dear Guest...",
   "manifestFirst": "We are not sure whether I can read the articles written here.",
-  "manifestSecond": "I ask you, when you come here, if you want, share your memories and thoughts about me, maybe the funny moments you had with me or the moments you hated me. So that this virtual tombstone can turn into a rare collection.",
+  "manifestSecond": "If you join here, enter your memories or information about me. This virtual tombstone can turn into a rare collectible or solidify into a faded stone.",
   "manifestThird": "Penguins are known as flightless birds. But I believe they are birds that refuse to fly.",
   "footerQuote": "Go to Heaven for the climate, Hell for the company. <br/>-Mark Twain",
   "messageDeleted": "Message deleted",
   "messageApproved": "Message approved",
   "manifest": "Manifest",
   "returnMainpage": "Return to mainpage",
-  "welcomeSite": "Welcome to the site"
+  "welcomeSite": "Welcome to the site",
+  "orderTypeError": "The order parameter must be 'asc' or 'desc'.",
+  "cantDeleteOwnMessage": "You cannot delete your own message"
 }

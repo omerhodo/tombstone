@@ -5,7 +5,7 @@
   },
   "hosting": [
     {
-      "site": "tombstonetest",
+      "site": "hodotomb",
       "public": "dist",
       "ignore": [
         "firebase.json",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "site": "hodotomb",
+      "site": "tombstonetest",
       "public": "dist",
       "ignore": [
         "firebase.json",

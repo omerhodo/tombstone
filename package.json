@@ -9,7 +9,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "stag": "vite build --mode staging",
-    "prod": "vite build --mode production"
+    "prod": "vite build --mode production",
+    "stgdeploy": "vite build --mode staging && firebase deploy --only hosting:tombstonetest",
+    "prddeploy": "vite build --mode production && firebase deploy --only hosting:hodotomb"
   },
   "dependencies": {
     "dayjs": "^1.11.10",

@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "tombstone-test",
+    "default": "tombstone-hodo",
     "staging": "tombstone-test",
     "production": "tombstone-hodo"
   },
@@ -9,7 +9,11 @@
       "hosting": {
         "staging": [
           "tombstone-test"
-        ],
+        ]
+      }
+    },
+    "tombstone-hodo": {
+      "hosting": {
         "prod": [
           "tombstone-hodo"
         ]

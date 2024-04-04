@@ -16,7 +16,7 @@ const AllMessages = () => {
   const [messages, setMessages] = useState<any[]>([]);
 
   useEffect(() => {
-    getData('messages').then((data) => {
+    getData('messages', 'asc').then((data) => {
       setMessages(data);
       setFilteredMessages(data);
     });
@@ -60,6 +60,7 @@ const AllMessages = () => {
                 key={index}
                 id={message.id}
                 name={message.userName}
+                email={message.email}
                 content={message.content}
                 date={dayjs(message.createdAt.toDate()).format('DD/MM/YYYY')}
               />
