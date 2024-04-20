@@ -1,4 +1,10 @@
-# React + TypeScript + Vite
+# I was developed my personel Tombstone, just as a fun project :) 
+
+If you want, you should visit and send me a good wishes
+- [HodoTomb.com](https://hodotomb.com/)
+- [HodoTomb.web.app](https://hodotomb.web.app/)
+
+# I used this technology React + TypeScript + Vite + Firebase + Scss
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
