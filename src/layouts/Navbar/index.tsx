@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/manifest">
+      <Link to="https://ppr.ist/15uZ0Pl4z" target="_blank">
         <img src={Logo} className="navbar--logo" alt="Logo" />
       </Link>
       <div className="navbar__title">

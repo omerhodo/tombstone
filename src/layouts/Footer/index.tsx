@@ -9,16 +9,10 @@ const Footer = () => {
   return (
     <footer className="footer">
       <AuthForm />
-      <div className="footer__quote">
-        <Link
-          to="https://ppr.ist/15uZ0Pl4z"
-          target="_blank"
-          className="footer__quote--left-button"
-        >
-          {t('sendMoney')}
-        </Link>
-        <span dangerouslySetInnerHTML={{ __html: t('footerQuote') }}></span>
-      </div>
+      <span
+        className="footer__quote"
+        dangerouslySetInnerHTML={{ __html: t('footerQuote') }}
+      ></span>
     </footer>
   );
 };

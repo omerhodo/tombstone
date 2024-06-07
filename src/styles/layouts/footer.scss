@@ -11,25 +11,8 @@
   color: $primary-light;
 
   &__quote {
-    display: flex;
-    justify-content: space-between;
     line-height: 1.2em;
     text-align: end;
     width: -webkit-fill-available;
-
-    a {
-      color: $primary-light;
-    }
-
-    &--left-button {
-      text-align: center;
-      font-size: 16px;
-      background-color: transparent;
-      color: $primary-light;
-      border: 2px solid $primary-light;
-      border-radius: 10px;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
   }
 }
