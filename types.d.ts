@@ -13,6 +13,11 @@ declare module '*.jpg' {
   export default content;
 }
 
+declare module '*.jpeg' {
+  const value: string;
+  export default value;
+}
+
 interface ImportMeta {
   env: {
     VITE_APP_FIREBASE_API_KEY: string;

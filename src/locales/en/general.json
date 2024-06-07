@@ -42,5 +42,6 @@
   "returnMainpage": "Return to mainpage",
   "welcomeSite": "Welcome to the site",
   "orderTypeError": "The order parameter must be 'asc' or 'desc'.",
-  "cantDeleteOwnMessage": "You cannot delete your own message"
+  "cantDeleteOwnMessage": "You cannot delete your own message",
+  "sendMoney": "Send Money" 
 }

@@ -42,5 +42,6 @@
   "returnMainpage": "Mezarlığa dön",
   "welcomeSite": "Mezarlığa hoş geldiniz",
   "orderTypeError": "Order parametresi 'asc' veya 'desc' olmalıdır.",
-  "cantDeleteOwnMessage": "Kendi dileğinizi silemezsiniz"
+  "cantDeleteOwnMessage": "Kendi dileğinizi silemezsiniz",
+  "sendMoney": "Ruhuna ₺ gönder"
 }
