@@ -9,8 +9,8 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="https://ppr.ist/15uZ0Pl4z" target="_blank">
-        <img src={Logo} className="navbar--logo" alt="Logo" />
+      <Link to="/manifest">
+        <img src={Logo} className="navbar__logo" alt="Logo" />
       </Link>
       <div className="navbar__title">
         <Link className="navbar__link" to="/">
@@ -18,7 +18,7 @@ const Navbar = () => {
         </Link>
       </div>
       <Link to="/manifest">
-        <img src={Logo} className="navbar--logo" alt="Logo" />
+        <img src={Logo} className="navbar__logo" alt="Logo" />
       </Link>
     </nav>
   );
