@@ -1,7 +1,7 @@
 @import '@styles/utilities/_utilities.scss';
 
 .navbar {
-  background-color: $primary-dark;
+  background-color: $primary;
   color: $primary-light;
   padding: 20px;
   display: flex;
@@ -17,7 +17,7 @@
     font-size: 22px;
   }
 
-  &--logo {
+  &__logo {
     display: flex;
     align-items: center;
     justify-content: center;
