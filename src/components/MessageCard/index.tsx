@@ -77,17 +77,17 @@ const MessageCard = ({ id, name, email, content, date }: MessageCardProps) => {
 
   return (
     <>
-      <div className="message-card is-glass" onClick={openModal}>
-        <div className="message-card__header mb-20">
-          <img className="message-card__header--avatar" src={Tree} alt="User" />
-          <h2 className="message-card__header--title">{name}</h2>
-          <hr className="message-card__header--seperator" />
+      <div className="c-message-card is-glass" onClick={openModal}>
+        <div className="c-message-card__header mb-20">
+          <img className="c-message-card__avatar" src={Tree} alt="User" />
+          <h2 className="c-message-card__title">{name}</h2>
+          <hr className="c-message-card--seperator" />
         </div>
-        <div className="message-card__body">
-          <p className="message-card__body--text">{content}</p>
+        <div className="c-message-card__body">
+          <p className="c-message-card__text">{content}</p>
         </div>
-        <div className="message-card__footer">
-          <span className="message-card__footer--date">{date}</span>
+        <div className="c-message-card__footer">
+          <span className="c-message-card__date">{date}</span>
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal} title={title}>
