@@ -12,9 +12,14 @@
       "type": "image/svg+xml"
     },
     {
-      "src": "src/assets/images/logo/tombstone-logo.svg",
+      "src": "src/assets/images/logo/tombstone-logo-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "src/assets/images/logo/tombstone-logo-512-512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml"
+      "type": "image/png"
     }
   ]
 }
