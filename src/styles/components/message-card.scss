@@ -1,6 +1,6 @@
 @import '@styles/utilities/_utilities.scss';
 
-.message-card {
+.c-message-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,55 +12,57 @@
   &__header {
     position: relative;
     align-items: center;
+  }
 
-    &--title {
-      padding-left: 30px;
-      padding-right: 20px;
-      text-align: center;
-      line-height: 1.2em;
-      font-size: 18px;
-      color: $primary-light;
+  &--seperator {
+    margin-left: 30px;
+    border: 0.5px solid $primary-dark;
+  }
 
-      @include truncate-text;
-    }
+  &__title {
+    padding-left: 30px;
+    padding-right: 20px;
+    text-align: center;
+    line-height: 1.2em;
+    font-size: 18px;
+    color: $primary-light;
 
-    &--seperator {
-      margin-left: 30px;
-      border: 0.5px solid $primary;
-    }
+    @include truncate-text;
+  }
 
-    &--avatar {
-      position: absolute;
-      top: -40px;
-      left: -40px;
-      width: 75px;
-      height: 75px;
-      border-radius: 50%;
-      background:  $primary-bg;
-      backdrop-filter: blur( 50px );
-    }
+  &__avatar {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 65px;
+    height: 65px;
+    padding: 10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background:  $primary-dark;
+    backdrop-filter: blur( 50px );
   }
 
   &__body {
     margin-bottom: 10px;
     @include truncate-text(3);
+  }
 
-    &--text {
-      padding-left: 30px;
-      padding-right: 20px;
-      color: $primary-light;
-      font-size: 18px;
-      line-height: 1.2em;
-    }
+  &__text {
+    padding-left: 30px;
+    padding-right: 20px;
+    color: $primary-light;
+    font-size: 18px;
+    line-height: 1.2em;
   }
 
   &__footer {
     display: flex;
     justify-content: flex-end;
+  }
 
-    &--date {
-      color: $primary-light;
-      font-size: 14px;
-    }
+  &__date {
+    color: $primary-light;
+    font-size: 14px;
   }
 }
