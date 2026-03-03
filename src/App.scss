@@ -1,5 +1,5 @@
-@import '@styles/utilities/_utilities.scss';
-@import '@styles/_all';
+@use '@styles/utilities/utilities' as *;
+@use '@styles/_all';
 
 body {
   background-color: $primary-bg;

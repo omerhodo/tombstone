@@ -1,4 +1,4 @@
-@import '@styles/utilities/_utilities.scss';
+@use '@styles/utilities/utilities' as *;
 
 .modal-overlay {
   position: fixed;
@@ -22,13 +22,13 @@
   min-height: 50vh;
   max-height: 80vh;
   border-radius: 10px;
-  
+
   @include mobile {
     max-width: 90vw;
     min-height: 60vh;
     max-height: 60vh;
   }
-  
+
   &__header {
     display: flex;
     border-radius: 10px 10px 0 0;
@@ -37,16 +37,16 @@
     background-color: $primary;
     padding: 20px;
   }
-  
+
   &__title{
     color: $primary-light;
     font-size: 20px;
     line-height: 1.2em;
     padding-right: 15px;
-    
+
     @include truncate-text;
   }
-  
+
   &__close {
     cursor: pointer;
 
@@ -55,7 +55,7 @@
       height: 30px;
     }
   }
-  
+
   &__body {
     padding: 20px;
     color: $primary-light;

@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $white: #ffffff;
 $black: #000000;
 $red: #c90000;
@@ -8,7 +10,7 @@ $grey-dark: #333333;
 $grey: #5f5f5f;
 $grey-light: #b3b3b3;
 
-$primary-light: lighten(#002fa7, 70%);
-$primary-bg: lighten(#002fa7, 35%);;
+$primary-light: color.adjust(#002fa7, $lightness: 70%);
+$primary-bg: color.adjust(#002fa7, $lightness: 35%);
 $primary: #002fa7;
-$primary-dark: darken(#002fa7, 20%);
+$primary-dark: color.adjust(#002fa7, $lightness: -20%);

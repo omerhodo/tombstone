@@ -1,6 +1,6 @@
-@import './reset';
-@import './spaces';
-@import './colors';
-@import './containers';
-@import './mixins';
-@import './typography';
+@forward './reset';
+@forward './spaces';
+@forward './colors';
+@forward './containers';
+@forward './mixins';
+@forward './typography';

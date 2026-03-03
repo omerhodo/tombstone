@@ -1,4 +1,4 @@
-@import '@styles/utilities/_utilities.scss';
+@use '@styles/utilities/utilities' as *;
 
 .new-message {
   display: flex;
@@ -40,7 +40,7 @@
     color: $grey;
     margin-bottom: 5px;
   }
-  
+
   &__warning {
     display: flex;
     justify-content: center;
@@ -50,7 +50,7 @@
     color: $primary;
     font-size: 20px;
   }
-  
+
   &__warn-text {
     font-size: 14px;
     color: $primary;
