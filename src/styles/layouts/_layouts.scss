@@ -1,6 +1,4 @@
-@import '@styles/utilities/_utilities.scss';
-
-@import './main-layouts';
-@import './navbar';
-@import './header';
-@import './footer';
+@use './main-layouts';
+@use './navbar';
+@use './header';
+@use './footer';
